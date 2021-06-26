@@ -50,7 +50,7 @@
 		DEF2D13726872C5400F3D2CA /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = "../../../../CultureCabinet-sj/CultureCabinet/Fourth/MyPageViewController.swift"; sourceTree = "<group>"; };
 		DEF2D13D26872CA700F3D2CA /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DEF2D13E26872CA700F3D2CA /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
-		DEF2D14226872CB000F3D2CA /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = "../../../CultureCabinet-sj/CultureCabinet/Extension.swift"; sourceTree = "<group>"; };
+		DEF2D14226872CB000F3D2CA /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F0B33C05268720C800C85149 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -155,8 +155,7 @@
 				DEF2D13D26872CA700F3D2CA /* Category.swift */,
 				DEF2D13E26872CA700F3D2CA /* PostData.swift */,
 			);
-			name = Resource;
-			path = "../../../CultureCabinet-sj/CultureCabinet/Resource";
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
