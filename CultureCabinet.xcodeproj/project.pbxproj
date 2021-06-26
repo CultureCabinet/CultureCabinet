@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89D89739127A81200EDD57F4 /* Pods_CultureCabinet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A9377AD92B101294A2B7FC /* Pods_CultureCabinet.framework */; };
 		DEF2D0E326871CE100F3D2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E226871CE100F3D2CA /* AppDelegate.swift */; };
 		DEF2D0E526871CE100F3D2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E426871CE100F3D2CA /* SceneDelegate.swift */; };
 		DEF2D0E726871CE100F3D2CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E626871CE100F3D2CA /* ViewController.swift */; };
@@ -33,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		009A4E6324A87F6B0F81F062 /* Pods-CultureCabinet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CultureCabinet.debug.xcconfig"; path = "Target Support Files/Pods-CultureCabinet/Pods-CultureCabinet.debug.xcconfig"; sourceTree = "<group>"; };
+		CCC74F7CF7547975C8C72C5C /* Pods-CultureCabinet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CultureCabinet.release.xcconfig"; path = "Target Support Files/Pods-CultureCabinet/Pods-CultureCabinet.release.xcconfig"; sourceTree = "<group>"; };
+		D9A9377AD92B101294A2B7FC /* Pods_CultureCabinet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CultureCabinet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF2D0DF26871CE100F3D2CA /* CultureCabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureCabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF2D0E226871CE100F3D2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF2D0E426871CE100F3D2CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +54,7 @@
 		DEF2D13726872C5400F3D2CA /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = "../../../../CultureCabinet-sj/CultureCabinet/Fourth/MyPageViewController.swift"; sourceTree = "<group>"; };
 		DEF2D13D26872CA700F3D2CA /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DEF2D13E26872CA700F3D2CA /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
-		DEF2D14226872CB000F3D2CA /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = "../../../CultureCabinet-sj/CultureCabinet/Extension.swift"; sourceTree = "<group>"; };
+		DEF2D14226872CB000F3D2CA /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F0B33C05268720C800C85149 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -65,12 +69,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D89739127A81200EDD57F4 /* Pods_CultureCabinet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07E49195A9AAA31857728424 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				009A4E6324A87F6B0F81F062 /* Pods-CultureCabinet.debug.xcconfig */,
+				CCC74F7CF7547975C8C72C5C /* Pods-CultureCabinet.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		48A0BF0854F3985857749205 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9A9377AD92B101294A2B7FC /* Pods_CultureCabinet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DEF2D0D626871CE100F3D2CA = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +105,8 @@
 				F0B33C0A268720C800C85149 /* Post+CoreDataProperties.swift */,
 				DEF2D0E126871CE100F3D2CA /* CultureCabinet */,
 				DEF2D0E026871CE100F3D2CA /* Products */,
+				07E49195A9AAA31857728424 /* Pods */,
+				48A0BF0854F3985857749205 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,8 +180,7 @@
 				DEF2D13D26872CA700F3D2CA /* Category.swift */,
 				DEF2D13E26872CA700F3D2CA /* PostData.swift */,
 			);
-			name = Resource;
-			path = "../../../CultureCabinet-sj/CultureCabinet/Resource";
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEF2D0F626871CEA00F3D2CA /* Build configuration list for PBXNativeTarget "CultureCabinet" */;
 			buildPhases = (
+				DB0C84AAB0E3C3FA1A44DE3E /* [CP] Check Pods Manifest.lock */,
 				DEF2D0DB26871CE100F3D2CA /* Sources */,
 				DEF2D0DC26871CE100F3D2CA /* Frameworks */,
 				DEF2D0DD26871CE100F3D2CA /* Resources */,
+				14DE33BCB65A87C96D490838 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +253,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14DE33BCB65A87C96D490838 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CultureCabinet/Pods-CultureCabinet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CultureCabinet/Pods-CultureCabinet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CultureCabinet/Pods-CultureCabinet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB0C84AAB0E3C3FA1A44DE3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CultureCabinet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEF2D0DB26871CE100F3D2CA /* Sources */ = {
@@ -400,6 +468,7 @@
 		};
 		DEF2D0F726871CEA00F3D2CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 009A4E6324A87F6B0F81F062 /* Pods-CultureCabinet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -419,6 +488,7 @@
 		};
 		DEF2D0F826871CEA00F3D2CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCC74F7CF7547975C8C72C5C /* Pods-CultureCabinet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
