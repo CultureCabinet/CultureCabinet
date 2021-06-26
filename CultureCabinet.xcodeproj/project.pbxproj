@@ -14,10 +14,15 @@
 		DEF2D0ED26871CE100F3D2CA /* CultureCabinet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0EB26871CE100F3D2CA /* CultureCabinet.xcdatamodeld */; };
 		DEF2D0EF26871CEA00F3D2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D0EE26871CEA00F3D2CA /* Assets.xcassets */; };
 		DEF2D0F226871CEA00F3D2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D0F026871CEA00F3D2CA /* LaunchScreen.storyboard */; };
-		DEF2D0FB26871D5A00F3D2CA /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D0F926871D5A00F3D2CA /* First.storyboard */; };
 		DEF2D0FF26871D6700F3D2CA /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D0FD26871D6700F3D2CA /* Second.storyboard */; };
 		DEF2D10126871D7400F3D2CA /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D10026871D7400F3D2CA /* Third.storyboard */; };
-		DEF2D10626871D8300F3D2CA /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D10426871D8300F3D2CA /* Fourth.storyboard */; };
+		DEF2D13226872C2B00F3D2CA /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D13026872C2B00F3D2CA /* MainPage.storyboard */; };
+		DEF2D13326872C2B00F3D2CA /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D13126872C2B00F3D2CA /* MainPageViewController.swift */; };
+		DEF2D13826872C5400F3D2CA /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D13626872C5400F3D2CA /* MyPage.storyboard */; };
+		DEF2D13926872C5400F3D2CA /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D13726872C5400F3D2CA /* MyPageViewController.swift */; };
+		DEF2D13F26872CA700F3D2CA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D13D26872CA700F3D2CA /* Category.swift */; };
+		DEF2D14026872CA700F3D2CA /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D13E26872CA700F3D2CA /* PostData.swift */; };
+		DEF2D14326872CB000F3D2CA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D14226872CB000F3D2CA /* Extension.swift */; };
 		F0B33C0B268720C800C85149 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C05268720C800C85149 /* User+CoreDataClass.swift */; };
 		F0B33C0C268720C800C85149 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */; };
 		F0B33C0D268720C800C85149 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */; };
@@ -37,10 +42,15 @@
 		DEF2D0EE26871CEA00F3D2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEF2D0F126871CEA00F3D2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEF2D0F326871CEA00F3D2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEF2D0FA26871D5A00F3D2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CultureCabinet/Base.lproj/First.storyboard; sourceTree = "<group>"; };
 		DEF2D0FE26871D6700F3D2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CultureCabinet/Base.lproj/Second.storyboard; sourceTree = "<group>"; };
 		DEF2D10026871D7400F3D2CA /* Third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
-		DEF2D10526871D8300F3D2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CultureCabinet/Base.lproj/Fourth.storyboard; sourceTree = "<group>"; };
+		DEF2D13026872C2B00F3D2CA /* MainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainPage.storyboard; path = "../../../../CultureCabinet-sj/CultureCabinet/First/MainPage.storyboard"; sourceTree = "<group>"; };
+		DEF2D13126872C2B00F3D2CA /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainPageViewController.swift; path = "../../../../CultureCabinet-sj/CultureCabinet/First/MainPageViewController.swift"; sourceTree = "<group>"; };
+		DEF2D13626872C5400F3D2CA /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MyPage.storyboard; path = "../../../../CultureCabinet-sj/CultureCabinet/Fourth/MyPage.storyboard"; sourceTree = "<group>"; };
+		DEF2D13726872C5400F3D2CA /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPageViewController.swift; path = "../../../../CultureCabinet-sj/CultureCabinet/Fourth/MyPageViewController.swift"; sourceTree = "<group>"; };
+		DEF2D13D26872CA700F3D2CA /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		DEF2D13E26872CA700F3D2CA /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		DEF2D14226872CB000F3D2CA /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = "../../../CultureCabinet-sj/CultureCabinet/Extension.swift"; sourceTree = "<group>"; };
 		F0B33C05268720C800C85149 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -86,6 +96,8 @@
 		DEF2D0E126871CE100F3D2CA /* CultureCabinet */ = {
 			isa = PBXGroup;
 			children = (
+				DEF2D14226872CB000F3D2CA /* Extension.swift */,
+				DEF2D13C26872CA700F3D2CA /* Resource */,
 				DEF2D10B26871E1C00F3D2CA /* Fourth */,
 				DEF2D10A26871E1400F3D2CA /* Third */,
 				DEF2D10926871E0C00F3D2CA /* Second */,
@@ -105,7 +117,8 @@
 		DEF2D10826871DFD00F3D2CA /* First */ = {
 			isa = PBXGroup;
 			children = (
-				DEF2D0F926871D5A00F3D2CA /* First.storyboard */,
+				DEF2D13026872C2B00F3D2CA /* MainPage.storyboard */,
+				DEF2D13126872C2B00F3D2CA /* MainPageViewController.swift */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -113,6 +126,7 @@
 		DEF2D10926871E0C00F3D2CA /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				F0B33C112687210200C85149 /* CreateController.swift */,
 				DEF2D0FD26871D6700F3D2CA /* Second.storyboard */,
 			);
 			path = Second;
@@ -129,10 +143,20 @@
 		DEF2D10B26871E1C00F3D2CA /* Fourth */ = {
 			isa = PBXGroup;
 			children = (
-				DEF2D10426871D8300F3D2CA /* Fourth.storyboard */,
-				F0B33C112687210200C85149 /* CreateController.swift */,
+				DEF2D13626872C5400F3D2CA /* MyPage.storyboard */,
+				DEF2D13726872C5400F3D2CA /* MyPageViewController.swift */,
 			);
 			path = Fourth;
+			sourceTree = "<group>";
+		};
+		DEF2D13C26872CA700F3D2CA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DEF2D13D26872CA700F3D2CA /* Category.swift */,
+				DEF2D13E26872CA700F3D2CA /* PostData.swift */,
+			);
+			name = Resource;
+			path = "../../../CultureCabinet-sj/CultureCabinet/Resource";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,10 +219,10 @@
 				DEF2D0F226871CEA00F3D2CA /* LaunchScreen.storyboard in Resources */,
 				DEF2D0EF26871CEA00F3D2CA /* Assets.xcassets in Resources */,
 				DEF2D0EA26871CE100F3D2CA /* Main.storyboard in Resources */,
-				DEF2D10626871D8300F3D2CA /* Fourth.storyboard in Resources */,
+				DEF2D13826872C5400F3D2CA /* MyPage.storyboard in Resources */,
+				DEF2D13226872C2B00F3D2CA /* MainPage.storyboard in Resources */,
 				DEF2D0FF26871D6700F3D2CA /* Second.storyboard in Resources */,
 				DEF2D10126871D7400F3D2CA /* Third.storyboard in Resources */,
-				DEF2D0FB26871D5A00F3D2CA /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,13 +237,18 @@
 				F0B33C122687210200C85149 /* CreateController.swift in Sources */,
 				DEF2D0ED26871CE100F3D2CA /* CultureCabinet.xcdatamodeld in Sources */,
 				F0B33C0D268720C800C85149 /* Category+CoreDataClass.swift in Sources */,
+				DEF2D13326872C2B00F3D2CA /* MainPageViewController.swift in Sources */,
 				F0B33C10268720C800C85149 /* Post+CoreDataProperties.swift in Sources */,
 				F0B33C0C268720C800C85149 /* User+CoreDataProperties.swift in Sources */,
+				DEF2D14326872CB000F3D2CA /* Extension.swift in Sources */,
+				DEF2D13926872C5400F3D2CA /* MyPageViewController.swift in Sources */,
 				F0B33C0F268720C800C85149 /* Post+CoreDataClass.swift in Sources */,
 				DEF2D0E326871CE100F3D2CA /* AppDelegate.swift in Sources */,
+				DEF2D14026872CA700F3D2CA /* PostData.swift in Sources */,
 				DEF2D0E526871CE100F3D2CA /* SceneDelegate.swift in Sources */,
 				F0B33C0B268720C800C85149 /* User+CoreDataClass.swift in Sources */,
 				F0B33C0E268720C800C85149 /* Category+CoreDataProperties.swift in Sources */,
+				DEF2D13F26872CA700F3D2CA /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,28 +271,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		DEF2D0F926871D5A00F3D2CA /* First.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEF2D0FA26871D5A00F3D2CA /* Base */,
-			);
-			name = First.storyboard;
-			sourceTree = "<group>";
-		};
 		DEF2D0FD26871D6700F3D2CA /* Second.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DEF2D0FE26871D6700F3D2CA /* Base */,
 			);
 			name = Second.storyboard;
-			sourceTree = "<group>";
-		};
-		DEF2D10426871D8300F3D2CA /* Fourth.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEF2D10526871D8300F3D2CA /* Base */,
-			);
-			name = Fourth.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
