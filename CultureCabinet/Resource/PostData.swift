@@ -14,9 +14,9 @@ class PostData {
     var content: String?
     var image: Data?
     var link: String?
-    let category: Category
+    let category: CategoryName
     
-    init(title: String, date: Date, score: Float, content: String, image:Data, link: String, category: Category) {
+    init(title: String, date: Date, score: Float, content: String, image:Data, link: String, category: CategoryName) {
         self.title = title
         self.date = date
         self.score = score
@@ -26,7 +26,7 @@ class PostData {
         self.category = category
     }
     
-    init(title: String, date: Date, score: Float, category: Category) {
+    init(title: String, date: Date, score: Float, category: CategoryName) {
         self.title = title
         self.date = date
         self.score = score
