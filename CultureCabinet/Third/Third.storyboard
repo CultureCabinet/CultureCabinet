@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EDR-Qs-0XT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="21H-KV-aGC">
+            <objects>
+                <viewController id="EDR-Qs-0XT" customClass="CalendarVC" customModule="CultureCabinet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MXP-9N-gdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbx-lG-alf" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="116.5" width="374" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="xpK-Tk-gg3"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY CALENDAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX1-dV-xpb">
+                                <rect key="frame" x="111.5" y="64" width="191.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UM1-mS-WYt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bbx-lG-alf" firstAttribute="leading" secondItem="UM1-mS-WYt" secondAttribute="leading" constant="20" id="Ckw-5Q-Wfv"/>
+                            <constraint firstItem="xX1-dV-xpb" firstAttribute="top" secondItem="UM1-mS-WYt" secondAttribute="top" constant="20" id="FAf-Ff-0hd"/>
+                            <constraint firstItem="xX1-dV-xpb" firstAttribute="centerX" secondItem="Bbx-lG-alf" secondAttribute="centerX" id="YVh-Ho-NOh"/>
+                            <constraint firstItem="Bbx-lG-alf" firstAttribute="top" secondItem="xX1-dV-xpb" secondAttribute="bottom" constant="20" id="vVO-7l-maI"/>
+                            <constraint firstAttribute="trailing" secondItem="Bbx-lG-alf" secondAttribute="trailing" constant="20" id="wp8-xh-hvX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Ug0-R1-CTV"/>
+                    <connections>
+                        <outlet property="calendarView" destination="Bbx-lG-alf" id="VTY-PT-2sa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LoH-Zc-01j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="678"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
