@@ -24,7 +24,6 @@ class CalendarVC: UIViewController {
         setUI()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         setUpEvents()
-//        postHelper.fetchAllPost()
     }
     
     func setUpEvents() {
