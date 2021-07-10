@@ -2,7 +2,7 @@
 //  Post+CoreDataClass.swift
 //  CultureCabinet
 //
-//  Created by 권예진 on 2021/06/26.
+//  Created by 임수정 on 2021/07/10.
 //
 //
 

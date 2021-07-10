@@ -7,5 +7,7 @@ target 'CultureCabinet' do
 
   # Pods for CultureCabinet
   pod 'FSCalendar'
+  pod 'Charts'
+  pod 'Cosmos', '~> 23.0'
  
 end

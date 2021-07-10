@@ -26,11 +26,12 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ///DATA SET
-//        userHelper.deleteAll()
-//        let user1 = UserData(image: (UIImage(named: "1")?.jpegData(compressionQuality: 1))!, level: 0, username: "sujeong")
-//        user1.level = Decimal(string: "1") as NSDecimalNumber?
-//        userHelper.insertUser(u: user1)
+        //DATA SET
+        userHelper.deleteAll()
+        var user1 = UserData(image: (UIImage(named: "1")?.jpegData(compressionQuality: 1))!, level: 0, username: "sujeong")
+        user1.level = Decimal(string: "1") as NSDecimalNumber? as! Int
+        userHelper.insertUser(u: user1)
+        
         categoryCnts = setListCnt(category: categoryHelper.fetchCategory())
 
     }
@@ -79,10 +80,6 @@ class MyPageViewController: UIViewController {
             levelImage.image = UIImage(named: "trophy")
         }
     }
-    
-    
-    
-    
 }
 
 extension MyPageViewController: UICollectionViewDataSource {

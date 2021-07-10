@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +27,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY CALENDAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX1-dV-xpb">
                                 <rect key="frame" x="111.5" y="64" width="191.5" height="32.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="coral2"/>
+                                <color key="highlightedColor" name="coral2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-7x-lqv">
+                                <rect key="frame" x="186" y="531.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="coral2"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -36,6 +43,8 @@
                             <constraint firstItem="Bbx-lG-alf" firstAttribute="leading" secondItem="UM1-mS-WYt" secondAttribute="leading" constant="20" id="Ckw-5Q-Wfv"/>
                             <constraint firstItem="xX1-dV-xpb" firstAttribute="top" secondItem="UM1-mS-WYt" secondAttribute="top" constant="20" id="FAf-Ff-0hd"/>
                             <constraint firstItem="xX1-dV-xpb" firstAttribute="centerX" secondItem="Bbx-lG-alf" secondAttribute="centerX" id="YVh-Ho-NOh"/>
+                            <constraint firstItem="jNc-7x-lqv" firstAttribute="top" secondItem="Bbx-lG-alf" secondAttribute="bottom" constant="15" id="ay4-ai-IQj"/>
+                            <constraint firstItem="jNc-7x-lqv" firstAttribute="centerX" secondItem="Bbx-lG-alf" secondAttribute="centerX" id="lMK-IM-5A7"/>
                             <constraint firstItem="Bbx-lG-alf" firstAttribute="top" secondItem="xX1-dV-xpb" secondAttribute="bottom" constant="20" id="vVO-7l-maI"/>
                             <constraint firstAttribute="trailing" secondItem="Bbx-lG-alf" secondAttribute="trailing" constant="20" id="wp8-xh-hvX"/>
                         </constraints>
@@ -43,14 +52,18 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Ug0-R1-CTV"/>
                     <connections>
                         <outlet property="calendarView" destination="Bbx-lG-alf" id="VTY-PT-2sa"/>
+                        <outlet property="selectLabel" destination="jNc-7x-lqv" id="A2y-0L-68r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoH-Zc-01j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="678"/>
+            <point key="canvasLocation" x="1426.0869565217392" y="677.67857142857144"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="coral2">
+            <color red="0.92500001192092896" green="0.64300000667572021" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

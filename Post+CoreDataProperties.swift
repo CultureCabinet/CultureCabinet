@@ -2,7 +2,7 @@
 //  Post+CoreDataProperties.swift
 //  CultureCabinet
 //
-//  Created by 권예진 on 2021/06/26.
+//  Created by 임수정 on 2021/07/10.
 //
 //
 
@@ -18,7 +18,7 @@ extension Post {
 
     @NSManaged public var category: NSDecimalNumber?
     @NSManaged public var content: String?
-    @NSManaged public var date: String?
+    @NSManaged public var date: Date?
     @NSManaged public var image: Data?
     @NSManaged public var link: String?
     @NSManaged public var score: Float

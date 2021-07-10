@@ -39,7 +39,7 @@ class UserHelper {
         if let entity = self.entity {
             let user = NSManagedObject(entity: entity, insertInto: context)
             user.setValue(u.image, forKey: "image")
-            user.setValue(u.lavel, forKey: "level")
+            user.setValue(u.level, forKey: "level")
             user.setValue(u.username, forKey: "username")
 
             do {

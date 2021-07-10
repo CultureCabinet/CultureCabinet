@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,15 +15,21 @@
 		DE3BAC89268F0EA4009BFF5E /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAC88268F0EA4009BFF5E /* UserHelper.swift */; };
 		DE3BAC8C268F13B6009BFF5E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAC8B268F13B6009BFF5E /* UserData.swift */; };
 		DE3BAC9226901F1F009BFF5E /* CategoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAC9126901F1F009BFF5E /* CategoryHelper.swift */; };
-		DE3BAC9D2690538B009BFF5E /* StarRatingStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE3BAC962690538B009BFF5E /* StarRatingStackView.xib */; };
-		DE3BAC9E2690538B009BFF5E /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3BAC972690538B009BFF5E /* Second.storyboard */; };
-		DE3BAC9F2690538B009BFF5E /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAC982690538B009BFF5E /* StarRatingStackView.swift */; };
-		DE3BACA02690538B009BFF5E /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAC992690538B009BFF5E /* UserInformation.swift */; };
-		DE3BACA12690538B009BFF5E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAC9A2690538B009BFF5E /* SignUpViewController.swift */; };
-		DE3BACA22690538B009BFF5E /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAC9B2690538B009BFF5E /* SignUp2ViewController.swift */; };
-		DE3BACA32690538B009BFF5E /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BAC9C2690538B009BFF5E /* StarRatingView.swift */; };
-		DE3BACA72690564B009BFF5E /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BACA52690564B009BFF5E /* CalendarVC.swift */; };
-		DE3BACA82690564B009BFF5E /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3BACA62690564B009BFF5E /* Third.storyboard */; };
+		DE3F6D3A269981730036BD4B /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D38269981730036BD4B /* Post+CoreDataClass.swift */; };
+		DE3F6D3B269981730036BD4B /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D39269981730036BD4B /* Post+CoreDataProperties.swift */; };
+		DE3F6D42269989180036BD4B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D41269989180036BD4B /* ChartViewController.swift */; };
+		DE3F6D50269991CE0036BD4B /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D49269991CE0036BD4B /* StarRatingStackView.swift */; };
+		DE3F6D51269991CE0036BD4B /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D4A269991CE0036BD4B /* UserInformation.swift */; };
+		DE3F6D52269991CE0036BD4B /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D4B269991CE0036BD4B /* SignUp2ViewController.swift */; };
+		DE3F6D53269991CE0036BD4B /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D4C269991CE0036BD4B /* StarRatingView.swift */; };
+		DE3F6D54269991CE0036BD4B /* StarRatingStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE3F6D4D269991CE0036BD4B /* StarRatingStackView.xib */; };
+		DE3F6D55269991CE0036BD4B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D4E269991CE0036BD4B /* SignUpViewController.swift */; };
+		DE3F6D56269991CE0036BD4B /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3F6D4F269991CE0036BD4B /* Second.storyboard */; };
+		DE3F6D5A269992570036BD4B /* InformHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D59269992570036BD4B /* InformHelper.swift */; };
+		DE3F6D5D269992670036BD4B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D5C269992670036BD4B /* DetailViewController.swift */; };
+		DE3F6D602699926F0036BD4B /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3F6D5F2699926F0036BD4B /* DetailViewController.storyboard */; };
+		DE3F6D6A26999E410036BD4B /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3F6D6826999E410036BD4B /* Third.storyboard */; };
+		DE3F6D6B26999E410036BD4B /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D6926999E410036BD4B /* CalendarVC.swift */; };
 		DEF2D0E326871CE100F3D2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E226871CE100F3D2CA /* AppDelegate.swift */; };
 		DEF2D0E526871CE100F3D2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E426871CE100F3D2CA /* SceneDelegate.swift */; };
 		DEF2D0E726871CE100F3D2CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E626871CE100F3D2CA /* ViewController.swift */; };
@@ -39,8 +45,6 @@
 		F0B33C0C268720C800C85149 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */; };
 		F0B33C0D268720C800C85149 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */; };
 		F0B33C0E268720C800C85149 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C08268720C800C85149 /* Category+CoreDataProperties.swift */; };
-		F0B33C0F268720C800C85149 /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C09268720C800C85149 /* Post+CoreDataClass.swift */; };
-		F0B33C10268720C800C85149 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C0A268720C800C85149 /* Post+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,15 +58,21 @@
 		DE3BAC88268F0EA4009BFF5E /* UserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
 		DE3BAC8B268F13B6009BFF5E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		DE3BAC9126901F1F009BFF5E /* CategoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHelper.swift; sourceTree = "<group>"; };
-		DE3BAC962690538B009BFF5E /* StarRatingStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarRatingStackView.xib; sourceTree = "<group>"; };
-		DE3BAC972690538B009BFF5E /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
-		DE3BAC982690538B009BFF5E /* StarRatingStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingStackView.swift; sourceTree = "<group>"; };
-		DE3BAC992690538B009BFF5E /* UserInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
-		DE3BAC9A2690538B009BFF5E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		DE3BAC9B2690538B009BFF5E /* SignUp2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
-		DE3BAC9C2690538B009BFF5E /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
-		DE3BACA52690564B009BFF5E /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
-		DE3BACA62690564B009BFF5E /* Third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Third.storyboard; path = ../../../../../Downloads/Third/Third.storyboard; sourceTree = "<group>"; };
+		DE3F6D38269981730036BD4B /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DE3F6D39269981730036BD4B /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DE3F6D41269989180036BD4B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		DE3F6D49269991CE0036BD4B /* StarRatingStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarRatingStackView.swift; path = ../../../../../Downloads/Second/StarRatingStackView.swift; sourceTree = "<group>"; };
+		DE3F6D4A269991CE0036BD4B /* UserInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInformation.swift; path = ../../../../../Downloads/Second/UserInformation.swift; sourceTree = "<group>"; };
+		DE3F6D4B269991CE0036BD4B /* SignUp2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUp2ViewController.swift; path = ../../../../../Downloads/Second/SignUp2ViewController.swift; sourceTree = "<group>"; };
+		DE3F6D4C269991CE0036BD4B /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarRatingView.swift; path = ../../../../../Downloads/Second/StarRatingView.swift; sourceTree = "<group>"; };
+		DE3F6D4D269991CE0036BD4B /* StarRatingStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StarRatingStackView.xib; path = ../../../../../Downloads/Second/StarRatingStackView.xib; sourceTree = "<group>"; };
+		DE3F6D4E269991CE0036BD4B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../../../../../Downloads/Second/SignUpViewController.swift; sourceTree = "<group>"; };
+		DE3F6D4F269991CE0036BD4B /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Second.storyboard; path = ../../../../../Downloads/Second/Second.storyboard; sourceTree = "<group>"; };
+		DE3F6D59269992570036BD4B /* InformHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformHelper.swift; sourceTree = "<group>"; };
+		DE3F6D5C269992670036BD4B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DE3F6D5F2699926F0036BD4B /* DetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		DE3F6D6826999E410036BD4B /* Third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
+		DE3F6D6926999E410036BD4B /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		DEF2D0DF26871CE100F3D2CA /* CultureCabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureCabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF2D0E226871CE100F3D2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF2D0E426871CE100F3D2CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,8 +90,6 @@
 		F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0B33C08268720C800C85149 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F0B33C09268720C800C85149 /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F0B33C0A268720C800C85149 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +110,6 @@
 				BF564B953EAF690C3516358F /* Pods-CultureCabinet.debug.xcconfig */,
 				430BB53CB8B6751BBAFDB71F /* Pods-CultureCabinet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -117,12 +124,12 @@
 		DEF2D0D626871CE100F3D2CA = {
 			isa = PBXGroup;
 			children = (
+				DE3F6D38269981730036BD4B /* Post+CoreDataClass.swift */,
+				DE3F6D39269981730036BD4B /* Post+CoreDataProperties.swift */,
 				F0B33C05268720C800C85149 /* User+CoreDataClass.swift */,
 				F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */,
 				F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */,
 				F0B33C08268720C800C85149 /* Category+CoreDataProperties.swift */,
-				F0B33C09268720C800C85149 /* Post+CoreDataClass.swift */,
-				F0B33C0A268720C800C85149 /* Post+CoreDataProperties.swift */,
 				DEF2D0E126871CE100F3D2CA /* CultureCabinet */,
 				DEF2D0E026871CE100F3D2CA /* Products */,
 				1DBA6B02F23CAC16A686ED0A /* Pods */,
@@ -162,6 +169,9 @@
 		DEF2D10826871DFD00F3D2CA /* First */ = {
 			isa = PBXGroup;
 			children = (
+				DE3F6D5F2699926F0036BD4B /* DetailViewController.storyboard */,
+				DE3F6D5C269992670036BD4B /* DetailViewController.swift */,
+				DE3F6D59269992570036BD4B /* InformHelper.swift */,
 				743678E12687667200CA770E /* MainPage.storyboard */,
 				DEF2D13126872C2B00F3D2CA /* MainPageViewController.swift */,
 				DE3BAC81268EFA7D009BFF5E /* PostHelper.swift */,
@@ -172,13 +182,13 @@
 		DEF2D10926871E0C00F3D2CA /* Second */ = {
 			isa = PBXGroup;
 			children = (
-				DE3BAC972690538B009BFF5E /* Second.storyboard */,
-				DE3BAC9B2690538B009BFF5E /* SignUp2ViewController.swift */,
-				DE3BAC9A2690538B009BFF5E /* SignUpViewController.swift */,
-				DE3BAC982690538B009BFF5E /* StarRatingStackView.swift */,
-				DE3BAC962690538B009BFF5E /* StarRatingStackView.xib */,
-				DE3BAC9C2690538B009BFF5E /* StarRatingView.swift */,
-				DE3BAC992690538B009BFF5E /* UserInformation.swift */,
+				DE3F6D4F269991CE0036BD4B /* Second.storyboard */,
+				DE3F6D4B269991CE0036BD4B /* SignUp2ViewController.swift */,
+				DE3F6D4E269991CE0036BD4B /* SignUpViewController.swift */,
+				DE3F6D49269991CE0036BD4B /* StarRatingStackView.swift */,
+				DE3F6D4D269991CE0036BD4B /* StarRatingStackView.xib */,
+				DE3F6D4C269991CE0036BD4B /* StarRatingView.swift */,
+				DE3F6D4A269991CE0036BD4B /* UserInformation.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -186,8 +196,8 @@
 		DEF2D10A26871E1400F3D2CA /* Third */ = {
 			isa = PBXGroup;
 			children = (
-				DE3BACA52690564B009BFF5E /* CalendarVC.swift */,
-				DE3BACA62690564B009BFF5E /* Third.storyboard */,
+				DE3F6D6926999E410036BD4B /* CalendarVC.swift */,
+				DE3F6D6826999E410036BD4B /* Third.storyboard */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -200,6 +210,7 @@
 				DE3BAC8B268F13B6009BFF5E /* UserData.swift */,
 				DE3BAC88268F0EA4009BFF5E /* UserHelper.swift */,
 				DE3BAC9126901F1F009BFF5E /* CategoryHelper.swift */,
+				DE3F6D41269989180036BD4B /* ChartViewController.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -272,14 +283,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3F6D54269991CE0036BD4B /* StarRatingStackView.xib in Resources */,
 				DEF2D0F226871CEA00F3D2CA /* LaunchScreen.storyboard in Resources */,
 				DEF2D0EF26871CEA00F3D2CA /* Assets.xcassets in Resources */,
 				743678E22687667200CA770E /* MainPage.storyboard in Resources */,
 				DEF2D0EA26871CE100F3D2CA /* Main.storyboard in Resources */,
-				DE3BAC9E2690538B009BFF5E /* Second.storyboard in Resources */,
 				743678E02687666500CA770E /* MyPage.storyboard in Resources */,
-				DE3BAC9D2690538B009BFF5E /* StarRatingStackView.xib in Resources */,
-				DE3BACA82690564B009BFF5E /* Third.storyboard in Resources */,
+				DE3F6D56269991CE0036BD4B /* Second.storyboard in Resources */,
+				DE3F6D6A26999E410036BD4B /* Third.storyboard in Resources */,
+				DE3F6D602699926F0036BD4B /* DetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,31 +344,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3BACA72690564B009BFF5E /* CalendarVC.swift in Sources */,
-				DE3BACA12690538B009BFF5E /* SignUpViewController.swift in Sources */,
+				DE3F6D51269991CE0036BD4B /* UserInformation.swift in Sources */,
 				DEF2D0E726871CE100F3D2CA /* ViewController.swift in Sources */,
-				DE3BACA02690538B009BFF5E /* UserInformation.swift in Sources */,
+				DE3F6D3B269981730036BD4B /* Post+CoreDataProperties.swift in Sources */,
 				DEF2D0ED26871CE100F3D2CA /* CultureCabinet.xcdatamodeld in Sources */,
 				DE3BAC8C268F13B6009BFF5E /* UserData.swift in Sources */,
+				DE3F6D5A269992570036BD4B /* InformHelper.swift in Sources */,
 				F0B33C0D268720C800C85149 /* Category+CoreDataClass.swift in Sources */,
+				DE3F6D52269991CE0036BD4B /* SignUp2ViewController.swift in Sources */,
 				DE3BAC9226901F1F009BFF5E /* CategoryHelper.swift in Sources */,
 				DE3BAC82268EFA7D009BFF5E /* PostHelper.swift in Sources */,
 				DEF2D13326872C2B00F3D2CA /* MainPageViewController.swift in Sources */,
-				F0B33C10268720C800C85149 /* Post+CoreDataProperties.swift in Sources */,
-				DE3BACA22690538B009BFF5E /* SignUp2ViewController.swift in Sources */,
 				F0B33C0C268720C800C85149 /* User+CoreDataProperties.swift in Sources */,
 				DE3BAC7F268EF9B0009BFF5E /* MyPageViewController.swift in Sources */,
+				DE3F6D55269991CE0036BD4B /* SignUpViewController.swift in Sources */,
+				DE3F6D3A269981730036BD4B /* Post+CoreDataClass.swift in Sources */,
 				DEF2D14326872CB000F3D2CA /* Extension.swift in Sources */,
-				F0B33C0F268720C800C85149 /* Post+CoreDataClass.swift in Sources */,
-				DE3BAC9F2690538B009BFF5E /* StarRatingStackView.swift in Sources */,
+				DE3F6D42269989180036BD4B /* ChartViewController.swift in Sources */,
 				DEF2D0E326871CE100F3D2CA /* AppDelegate.swift in Sources */,
-				DE3BACA32690538B009BFF5E /* StarRatingView.swift in Sources */,
+				DE3F6D6B26999E410036BD4B /* CalendarVC.swift in Sources */,
+				DE3F6D50269991CE0036BD4B /* StarRatingStackView.swift in Sources */,
+				DE3F6D53269991CE0036BD4B /* StarRatingView.swift in Sources */,
 				DEF2D14026872CA700F3D2CA /* PostData.swift in Sources */,
 				DEF2D0E526871CE100F3D2CA /* SceneDelegate.swift in Sources */,
 				DE3BAC89268F0EA4009BFF5E /* UserHelper.swift in Sources */,
 				F0B33C0B268720C800C85149 /* User+CoreDataClass.swift in Sources */,
 				F0B33C0E268720C800C85149 /* Category+CoreDataProperties.swift in Sources */,
 				DEF2D13F26872CA700F3D2CA /* CategoryName.swift in Sources */,
+				DE3F6D5D269992670036BD4B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

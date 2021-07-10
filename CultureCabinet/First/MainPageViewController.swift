@@ -22,6 +22,7 @@ class MainPageViewController: UIViewController {
     let dateformatter2 = DateFormatter()
 
     let postHelper = PostHelper()
+    let categoryHelper = CategoryHelper()
     var postList: [Post] = []
 
     override func viewDidLoad() {
@@ -29,28 +30,19 @@ class MainPageViewController: UIViewController {
         dateFormat1Setting()
         dataFormat2Setting()
         
-
-        let post1 = PostData(title: "제목", date: Date(), score: 5.0, category: .drama)
-        post1.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-        let post2 = PostData(title: "제목2", date: Date(), score: 4.5, category: .movie)
-        post2.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-        let post3 = PostData(title: "제목3", date: Date(), score: 4.5, category: .sports)
-        post3.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        posts.append(post1)
-//        posts.append(post2)
-//        posts.append(post3)
-        ///
-//        let p1 = Post(title: post1.title, date: dateformatter2.string(from: post1.date), score: post1.score, category: 0)
 //        postHelper.deleteAll()
-//        postHelper.insertPost(ipost:post1)
-//        postHelper.insertPost(ipost:post2)
-//        postHelper.insertPost(ipost:post3)
+//        let p1 = PostData(title: "슬기로운 의사생활", date: Date(), score: 5.0, content: "슬의", image: (UIImage(named: "슬의2")?.jpegData(compressionQuality: 1))!, link: "link", category: .drama)
+//        let p2 = PostData(title: "크루엘라", date: Date(), score: 5.0, content: "크루엘라 드빌 엠마스톤 최고", image: (UIImage(named: "크루엘라")?.jpegData(compressionQuality: 1))!, link: "link", category: .movie)
+//        postHelper.insertPost(ipost: p1)
+//        postHelper.insertPost(ipost: p2)
+//        
+//        categoryHelper.insertCategoryData()
         
         postList = postHelper.fetchAllPost()
         posts = postToPostData(postss:postList)
         
-        
     }
+    
     
     func dateFormat1Setting(){
         dateformatter1.locale = Locale(identifier: "ko_KR")
@@ -70,15 +62,12 @@ class MainPageViewController: UIViewController {
     //MARK: - button 처리
     @IBAction func all(_ sender: Any) {
         //button UI
-        //db에서 모두 불러오기 async (posts 리스트 업데이트)
         postList = postHelper.fetchAllPost()
-//        print(postList)
         posts = postToPostData(postss:postList)
         collectionView.reloadData()
     }
     
     @IBAction func movie(_ sender: Any) {
-        //db에서 영화 불러오기 async
         postList = postHelper.fetchMoviePost()
         posts = postToPostData(postss:postList)
         collectionView.reloadData()
@@ -86,7 +75,6 @@ class MainPageViewController: UIViewController {
     
     
     @IBAction func drama(_ sender: Any) {
-        //db에서 드라마 불러오기 async
         postList = postHelper.fetchDramaPost()
         posts = postToPostData(postss:postList)
         collectionView.reloadData()
@@ -94,31 +82,27 @@ class MainPageViewController: UIViewController {
     
     
     @IBAction func play(_ sender: Any) {
-        //db에서 연극 불러오기 async
         postList = postHelper.fetchPlayPost()
         posts = postToPostData(postss:postList)
         collectionView.reloadData()
     }
     
     @IBAction func sports(_ sender: Any) {
-        //db에서 스포츠 불러오기 async
         postList = postHelper.fetchSportsPost()
         posts = postToPostData(postss:postList)
         collectionView.reloadData()
     }
     
     @IBAction func exhibition(_ sender: Any) {
-        //db에서 전시 불러오기 async
         postList = postHelper.fetchExhibitionPost()
         posts = postToPostData(postss:postList)
         collectionView.reloadData()
     }
     
     func postToPostData(postss: [Post]) -> [PostData]{
-        
         var postDataList: [PostData] = []
         for post in postss {
-            let pd = PostData(title: post.title!, date: dateformatter2.date(from:post.date!)!, score: post.score, category: intToCategoryName[post.category as! Int]!)
+            let pd = PostData(title: post.title!, date: post.date!, score: post.score, category: intToCategoryName[post.category as! Int]!)
             if post.image != nil {
                 pd.image = post.image
             }
@@ -152,7 +136,8 @@ extension MainPageViewController: UICollectionViewDataSource {
         cell.dateLabel.text = dateformatter1.string(from: posts[indexPath.item].date)
 
         cell.layer.cornerRadius = 10
-        cell.backView.setGradient(color1: UIColor(white: 0, alpha: 0), color2: UIColor(white: 0, alpha: 1))
+//        cell.backView.setGradient(color1: UIColor(white: 0, alpha: 0), color2: UIColor(white: 0, alpha: 1))
+        
         
         return cell
     }
@@ -162,6 +147,19 @@ extension MainPageViewController: UICollectionViewDataSource {
 
 extension MainPageViewController: UICollectionViewDelegate {
     //상세화면으로 이동
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt: IndexPath){
+        guard let vc = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+            return
+        }
+        vc.image = posts[didSelectItemAt.item].image
+        vc.date = posts[didSelectItemAt.item].date
+        vc.score = posts[didSelectItemAt.item].score
+        vc.content = posts[didSelectItemAt.item].content
+        
+        vc.modalPresentationStyle = .automatic
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 extension MainPageViewController: UICollectionViewDelegateFlowLayout {

@@ -9,12 +9,12 @@ import Foundation
 
 class UserData {
     let image: Data
-    let lavel: Int
+    var level: Int
     let username: String
     
     init(image: Data, level: Int, username: String) {
         self.image = image
-        self.lavel = level
+        self.level = level
         self.username = username
     }
 }
