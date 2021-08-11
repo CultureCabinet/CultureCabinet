@@ -100,7 +100,7 @@ class SignUp2ViewController: UIViewController,UIPickerViewDelegate, UIPickerView
 //    }
     @IBAction func touchUpComp(_ sender: UIButton){
        // UserInformation.shared.phoneNumber = phoneNumTextField.text!
-        UserInformation.shared.date = self.datePicker.date
+        UserInformation.shared.date = dateLabel.text!
         UserInformation.shared.score =  Float(star.rating)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.container = appDelegate.persistentContainer
@@ -122,9 +122,15 @@ class SignUp2ViewController: UIViewController,UIPickerViewDelegate, UIPickerView
         }catch{
             print(error.localizedDescription)
         }
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        guard let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainPageViewController else {
+            return
+        }
+      
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true, completion: nil)
+        
     }
-    
     func fetchContact(){
         do{
             let content = try self.container.viewContext.fetch(Post.fetchRequest())as! [Post]
