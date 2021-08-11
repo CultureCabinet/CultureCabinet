@@ -103,21 +103,25 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     // TextView Place Holder
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "제가 바로 PlaceHolder입니다."
+            textView.text = "느낀점을 작성하세요."
             textView.textColor = UIColor.lightGray
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.image = nil
+        idTextField.text = nil
+        UserInformation.shared.category = 0
         introTextView.delegate = self // txtvReview가 유저가 선언한 outlet
-        introTextView.text = "느낀점을 작성하세요."
+        introTextView.text =  nil
         introTextView.textColor = UIColor.lightGray
-        completeButton.isEnabled = false
+       
         
         self.datePicker.addTarget(self, action: #selector(self.didDatePickerValueChanged(_:)), for: UIControl.Event.valueChanged)
         
         dateLabel.text = dateFormatter.string(from: datePicker.date)
+    
 //        nextButton.isEnabled = false
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapView(_:)))
@@ -140,11 +144,16 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         let date: Date = self.datePicker.date // sender.date
         let dateString: String = self.dateFormatter.string(from: date)
-        
+        let today = Date()
+        let dateStrings: String = self.dateFormatter.string(from: today)
+       
         self.dateLabel.text = dateString
-        
-        if dateLabel.text != nil{
+        print(dateString)
+        if dateLabel.text == nil{
+            dateLabel.text = dateStrings
+            print("]]]]]]]]]]")
             completeButton.isEnabled = true
+            
         }
     }
             
@@ -152,50 +161,61 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func touchUpCancel(_ sender: UIButton){
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
     @IBAction func touchUpComp(_ sender: UIButton){
-       // UserInformation.shared.phoneNumber = phoneNumTextField.text!
-        UserInformation.shared.title = idTextField.text!
-        UserInformation.shared.content = introTextView.text!
-        UserInformation.shared.image = imgData
-        UserInformation.shared.date = dateLabel.text!
-        UserInformation.shared.score =  Float(star.rating)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        self.container = appDelegate.persistentContainer
-        let entity = NSEntityDescription.entity(forEntityName: "Post", in:self.container.viewContext)
-       
-        let post_thing = NSManagedObject(entity: entity!, insertInto: self.container.viewContext)
-        
-        post_thing.setValue(UserInformation.shared.title,forKey: "title")
-        post_thing.setValue(UserInformation.shared.date,forKey: "date")
-        post_thing.setValue(UserInformation.shared.score,forKey: "score")
-        post_thing.setValue(UserInformation.shared.content,forKey: "content")
-        post_thing.setValue(UserInformation.shared.image,forKey: "image")
-        post_thing.setValue("blank",forKey: "link")
-        post_thing.setValue(UserInformation.shared.category,forKey: "category")
-        
-        do{
-            try self.container.viewContext.save()
-            fetchContact()
-        }catch{
-            print(error.localizedDescription)
+        if(idTextField.text != "" && introTextView.text != "" && imageView.image != nil){
+            UserInformation.shared.title = idTextField.text!
+            UserInformation.shared.content = introTextView.text!
+            UserInformation.shared.image = imgData
+            UserInformation.shared.date = dateLabel.text!
+            UserInformation.shared.score =  Float(star.rating)
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            self.container = appDelegate.persistentContainer
+            let entity = NSEntityDescription.entity(forEntityName: "Post", in:self.container.viewContext)
+           
+            let post_thing = NSManagedObject(entity: entity!, insertInto: self.container.viewContext)
+            
+            post_thing.setValue(UserInformation.shared.title,forKey: "title")
+            post_thing.setValue(UserInformation.shared.date,forKey: "date")
+            post_thing.setValue(UserInformation.shared.score,forKey: "score")
+            post_thing.setValue(UserInformation.shared.content,forKey: "content")
+            post_thing.setValue(UserInformation.shared.image,forKey: "image")
+            post_thing.setValue("blank",forKey: "link")
+            post_thing.setValue(UserInformation.shared.category,forKey: "category")
+            
+            do{
+                try self.container.viewContext.save()
+                fetchContact()
+                let alert = UIAlertController(title: "알림", message: "성공적으로 저장했습니다.", preferredStyle: .alert)
+                let confirm = UIAlertAction(title: "확인", style: .default, handler: nil)
+               
+                alert.addAction(confirm)
+                present(alert, animated: true, completion: nil)
+                self.viewDidLoad()
+               
+            }catch{
+                print(error.localizedDescription)
+            }
         }
-//        guard let vc = UIStoryboard(name: "MainPage", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainPageViewController else {
-//            return
-//        }
-//
-//        vc.modalPresentationStyle = .fullScreen
-//        vc.modalTransitionStyle = .crossDissolve
-//        present(vc, animated: true, completion: nil)
-        categoryPicker = nil
-        completeButton = nil
-        datePicker
-        @IBOutlet weak var dateLabel: UILabel!
-        @IBOutlet weak var star: CosmosView!
-        @IBOutlet weak var idTextField: UITextField!
-        @IBOutlet weak var introTextView: UITextView!
-    //    @IBOutlet weak var nextButton: UIButton!
-        @IBOutlet weak var imageView: UIImageView!
+        else{
+            let alert = UIAlertController(title: "알림", message: "모든 사항을 작성해주세요.", preferredStyle: .actionSheet)
+            let confirm = UIAlertAction(title: "확인", style: .default, handler: nil)
+           
+            alert.addAction(confirm)
+            present(alert, animated: true, completion: nil)
+            
+            
+        }
+      
+        
+      
     }
     func fetchContact(){
         do{

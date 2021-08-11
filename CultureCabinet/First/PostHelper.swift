@@ -100,11 +100,17 @@ class PostHelper {
     }
     
     func insertPost(ipost: PostData){
+        let dateformatter1 = DateFormatter()
+        dateformatter1.locale = Locale(identifier: "ko_KR")
+        dateformatter1.timeZone = TimeZone(identifier: "KST")
+        dateformatter1.dateFormat = "YYYY-MM-dd"
+        
         if let entity = self.entity {
             let post = NSManagedObject(entity: entity, insertInto: context)
             post.setValue(ipost.title, forKey: "title")
             post.setValue(ipost.content, forKey: "content")
-            post.setValue(ipost.date, forKey: "date")
+//            post.setValue(dateformatter1.string(from: ipost.date), forKey: "date")
+            post.setValue("2021-07-01", forKey: "date")
             post.setValue(ipost.image, forKey: "image")
             post.setValue(CategoryNameToInt[ipost.category], forKey: "category")
             post.setValue(ipost.link, forKey: "link")
@@ -127,8 +133,19 @@ class PostHelper {
             print(error.localizedDescription)
         }
     }
+    func delete(row: Int) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Post")
+        var postss = [Post]()
+        do {
+            postss = try context.fetch(fetchRequest) as! [Post]
+            context.delete(postss[row])
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     
-    
+
     
     
 }
