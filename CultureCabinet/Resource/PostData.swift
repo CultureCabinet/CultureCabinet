@@ -9,14 +9,14 @@ import Foundation
 
 class PostData {
     let title: String
-    let date: Date
+    let date: String
     let score: Float
     var content: String?
     var image: Data?
     var link: String?
     let category: CategoryName
     
-    init(title: String, date: Date, score: Float, content: String, image:Data, link: String, category: CategoryName) {
+    init(title: String, date: String, score: Float, content: String, image:Data, link: String, category: CategoryName) {
         self.title = title
         self.date = date
         self.score = score
@@ -26,7 +26,7 @@ class PostData {
         self.category = category
     }
     
-    init(title: String, date: Date, score: Float, category: CategoryName) {
+    init(title: String, date: String, score: Float, category: CategoryName) {
         self.title = title
         self.date = date
         self.score = score

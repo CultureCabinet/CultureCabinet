@@ -22,22 +22,27 @@ class MainPageViewController: UIViewController {
     var posts: [PostData] = []
     let dateformatter1 = DateFormatter()
     let dateformatter2 = DateFormatter()
-
+    let today = Date()
+   
     
     let postHelper = PostHelper()
     var postList: [Post] = []
 
+    
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFormat1Setting()
         dataFormat2Setting()
-        
 
-//        let post1 = PostData(title: "제목", date: Date(), score: 5.0, category: .drama)
+//        let date:Date = Date()
+//        let dateString:String = dateformatter2.string(from: date)
+//        let post1 = PostData(title: "제목", date: dateString, score: 5.0, category: .drama)
 //        post1.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post2 = PostData(title: "제목2", date: Date(), score: 4.5, category: .movie)
+//        let post2 = PostData(title: "제목2", date: dateString, score: 4.5, category: .movie)
 //        post2.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post3 = PostData(title: "제목3", date: Date(), score: 4.5, category: .sports)
+//        let post3 = PostData(title: "제목3", date: dateString, score: 4.5, category: .sports)
 //        post3.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
 //        posts.append(post1)
 //        posts.append(post2)
@@ -50,8 +55,6 @@ class MainPageViewController: UIViewController {
         
         postList = postHelper.fetchAllPost()
         posts = postToPostData(postss:postList)
-        
-        
     }
     
     func dateFormat1Setting(){
@@ -117,10 +120,9 @@ class MainPageViewController: UIViewController {
     }
     
     func postToPostData(postss: [Post]) -> [PostData]{
-        
         var postDataList: [PostData] = []
         for post in postss {
-            let pd = PostData(title: post.title!, date: dateformatter2.date(from:post.date!)!, score: post.score, category: intToCategoryName[post.category as! Int]!)
+            let pd = PostData(title: post.title!, date: post.date!, score: post.score, category: intToCategoryName[post.category as! Int]!)
             if post.image != nil {
                 pd.image = post.image
             }
@@ -151,7 +153,7 @@ extension MainPageViewController: UICollectionViewDataSource {
         cell.categoryLabel.text = categoryMap[posts[indexPath.item].category]
         cell.imgView.image = UIImage(data: posts[indexPath.item].image ?? Data())
         cell.titleLabel.text = posts[indexPath.item].title
-        cell.dateLabel.text = dateformatter1.string(from: posts[indexPath.item].date)
+        cell.dateLabel.text = posts[indexPath.item].date
 
         cell.layer.cornerRadius = 10
         cell.backView.setGradient(color1: UIColor(white: 0, alpha: 0), color2: UIColor(white: 0, alpha: 1))
@@ -170,15 +172,16 @@ extension MainPageViewController: UICollectionViewDelegate {
         }
         vc.image = posts[didSelectItemAt.item].image
         vc.titles = posts[didSelectItemAt.item].title
-        vc.date = dateformatter1.string(from: posts[didSelectItemAt.item].date)
+        vc.date = posts[didSelectItemAt.item].date
         vc.score = posts[didSelectItemAt.item].score
         vc.content = posts[didSelectItemAt.item].content
         vc.indexs = didSelectItemAt.item
+        vc.category = CategoryNameToString[posts[didSelectItemAt.item].category]!
         vc.modalPresentationStyle = .automatic
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
-    }
+}
     
 
 extension MainPageViewController: UICollectionViewDelegateFlowLayout {

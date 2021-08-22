@@ -8,7 +8,7 @@
 
 import Foundation
 
-class InformHelper{
+class InformHelper {
     
     static let shared: InformHelper = InformHelper()
     var category: Int?

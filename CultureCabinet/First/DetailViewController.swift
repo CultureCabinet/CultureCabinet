@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     //@IBOutlet weak var cellNumLabel: UILabel!
     
     let postHelper = PostHelper()
+    let categoryHelper = CategoryHelper()
     var postList: [Post] = []
     @IBOutlet weak var star_detail: CosmosView!
     @IBOutlet weak var photo_detail: UIImageView!
@@ -31,12 +32,17 @@ class DetailViewController: UIViewController {
     var score: Float?
     var titles: String?
     var indexs: Int?
+    var category: String!
+    
+    let dateformatter1 = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //popUpView.layer.cornerRadius = 10
         //cellNumLabel.text = cellNum
         print(content)
+        dateFormat1Setting()
+        
         photo_detail.image = UIImage(data: image ?? Data())
         title_detail.text = titles
         date_detail.text = date
@@ -44,8 +50,27 @@ class DetailViewController: UIViewController {
         content_detail.text = content
     }
     
+   
+    func dateFormat1Setting(){
+        dateformatter1.locale = Locale(identifier: "ko_KR")
+        dateformatter1.timeZone = TimeZone(identifier: "KST")
+        dateformatter1.dateFormat = "YYYY-MM-dd"
+    }
     @IBAction func touchConfirmButton(_ sender: UIButton) {
         postHelper.delete(row:indexs ?? 0)
+//        let CategoryNameToString: [CategoryName:String] = [
+//            .movie:"movie",
+//            .drama:"drama",
+//            .play:"play",
+//            .sports:"sports",
+//            .exhibition:"exhibition"
+//        ]
+        
+       
+        
+        categoryHelper.delete(categoryName: category)
+        
+       
 //        let alert = UIAlertController(title: "알림", message: "성공적으로 삭제했습니다.", preferredStyle: .alert)
 //        let confirm = UIAlertAction(title: "확인", style: .default, handler: nil)
 //

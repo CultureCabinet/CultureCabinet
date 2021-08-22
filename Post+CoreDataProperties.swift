@@ -18,7 +18,7 @@ extension Post {
 
     @NSManaged public var category: NSDecimalNumber?
     @NSManaged public var content: String?
-    @NSManaged public var date: Date?
+    @NSManaged public var date: String?
     @NSManaged public var image: Data?
     @NSManaged public var link: String?
     @NSManaged public var score: Float

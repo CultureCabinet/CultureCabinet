@@ -26,9 +26,10 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        categoryHelper.insertCategoryData()
         //DATA SET
         userHelper.deleteAll()
-        var user1 = UserData(image: (UIImage(named: "1")?.jpegData(compressionQuality: 1))!, level: 0, username: "sujeong")
+        var user1 = UserData(image: (UIImage(named: "1")?.jpegData(compressionQuality: 1))!, level: 0, username: "test user")
         user1.level = Decimal(string: "1") as NSDecimalNumber? as! Int
         userHelper.insertUser(u: user1)
         
@@ -100,11 +101,7 @@ extension MyPageViewController: UICollectionViewDataSource {
         case 0:
             cell.categoryLabel.text = "All"
             cell.categoryImoji.text = "🎞🎬🎭⚾️🖼"
-            var allCnt = 0
-            for v in categoryCnts.values {
-                allCnt = allCnt + v
-            }
-            cell.categoryCntLabel.text = String(allCnt)
+            cell.categoryCntLabel.text = String(posts.count)
             break
         default:
             cell.categoryLabel.text = intToCategoryNameString[indexPath.item-1]

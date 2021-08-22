@@ -135,6 +135,11 @@
             <point key="canvasLocation" x="-7.2463768115942031" y="84.375"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="vs7-8X-Q0l">
+            <size key="intrinsicContentSize" width="215" height="39"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
