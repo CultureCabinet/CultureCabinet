@@ -24,11 +24,11 @@ class UserHelper {
         return user
     }
     
-    func fetchUser()-> User {
+    func fetchUser()-> [User] {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        var user = User()
+        var user:[User] = []
         do {
-            user = try context.fetch(fetchRequest)[0] as! User
+            user = try context.fetch(fetchRequest) as! [User]
         } catch {
             print(error.localizedDescription)
         }
@@ -48,6 +48,24 @@ class UserHelper {
             } catch {
                 print(error.localizedDescription)
             }
+        }
+    }
+    func updateUser(u: User){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        var user = User()
+        do {
+            user = try context.fetch(fetchRequest)[0] as! User
+            user.setValue(u.image, forKey: "image")
+            user.setValue(u.level, forKey: "level")
+            user.setValue(u.username, forKey: "username")
+            do {
+                try context.save()
+                print("suc update")
+            } catch {
+                print(error.localizedDescription)
+            }
+        } catch {
+            print(error.localizedDescription)
         }
     }
     

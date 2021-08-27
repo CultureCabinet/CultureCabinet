@@ -18,15 +18,15 @@ class CalendarVC: UIViewController {
     @IBOutlet var cabinetCollectionView: UICollectionView!
     
     let dateFormatter = DateFormatter()
-    var one: [String] = []
-    var two: [String] = []
-    var threeMore: [String] = []
-    var cabinet_date: [String] = ["2021-08-09", "2021-08-09", "2021-08-06"]
+    var one: [Date] = []
+    var two: [Date] = []
+    var threeMore: [Date] = []
     var cabinet_theme: [String] = ["🎞", "🎬", "🎞"]
     var cabinet_img_name: [String] = ["twilight", "슬기로운의사생활", "twilight"]
     var cabinet_comment: [String] = ["책을 읽고 본 후기는 조금 아쉬웠지만, 재미있었다. 다음 이야기는 어떻게 표현되었을지 궁금해지는 영화였다. ", "very good drama\n", "I love 뱀파이어"]
     
-    var selectedDate: String = ""
+    var selectedDate: Date = Date()
+    var selectedDateString: String = ""
     
     var posts: [PostData] = []
     let postHelper = PostHelper()
@@ -36,7 +36,16 @@ class CalendarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        
         postList = postHelper.fetchAllPost()
+        print("postList")
+        print(postList)
+        posts = postToPostData(postss:postList)
+        
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        setUpEvents()
     }
    
     
@@ -57,11 +66,28 @@ class CalendarVC: UIViewController {
         }
         return postDataList
     }
+    
+    func setUpEvents() {
+        for post in posts {
+            let date_toDate = dateFormatter.date(from: post.date)
+            if one.contains(date_toDate!) {
+                one.remove(at: one.firstIndex(of: date_toDate!)!)
+                two.append(date_toDate!)
+            } else if two.contains(date_toDate!) {
+                two.remove(at: two.firstIndex(of: date_toDate!)!)
+                threeMore.append(date_toDate!)
+            } else if threeMore.contains(date_toDate!) {
+                
+            } else {
+                one.append(date_toDate!)
+            }
+        }
+    }
 }
 
 // MARK:- CalendarView
 extension CalendarVC: FSCalendarDelegate, FSCalendarDataSource {
-    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: String) -> Int {
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         if self.one.contains(date) {
             return 1
         } else if self.two.contains(date) {
@@ -73,22 +99,23 @@ extension CalendarVC: FSCalendarDelegate, FSCalendarDataSource {
         }
     }
     
-    public func calendar(_ calendar: FSCalendar, didSelect date: String, at monthPosition: FSCalendarMonthPosition) {
+    public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         setIcon()
         
-        selectedDate = date
-        selectedDateLabel.text = date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        selectedDate = Date()
+        selectedDateString = dateFormatter.string(from: date)
+        selectedDateLabel.text = selectedDateString
         
+        print("select")
+        print(selectedDateString)
+        
+        postList = postHelper.fetchSelectedDatePost(selectedDateString: selectedDateString)
         posts = postToPostData(postss:postList)
-        
-        // 이번 달만 가져와서
-        // 날짜 선택 시
-        // collectionView 에 보여주기
-        for date in cabinet_date {
-            if date == selectedDate {
-                print(cabinet_date.firstIndex(of: selectedDate))
-            }
-        }
+        print("select post")
+        print(postList)
+        //collectionView.reloadData()
         
     }
     
@@ -102,23 +129,17 @@ extension CalendarVC: FSCalendarDelegate, FSCalendarDataSource {
 
 // MARK:- CollectionView
 extension CalendarVC: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cabinet_comment.count
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CabinetCVC.identifier, for: indexPath) as? CabinetCVC else {
             return UICollectionViewCell()
         }
-        let image = UIImage(named: "\(cabinet_img_name[indexPath.row]).jpeg")
-        cell.theme_icon?.text = cabinet_theme[indexPath.row]
-        cell.imageView?.image = image
-        cell.commentView?.backgroundColor = UIColor(named: "coral1")
-        cell.commentLabel?.text = cabinet_comment[indexPath.row]
+        cell.theme_icon?.text = categoryMap[posts[indexPath.item].category]
+        cell.imageView?.image = UIImage(data: posts[indexPath.item].image ?? Data())
+        //cell.commentLabel?.text = cabinet_comment[indexPath.row]
         cell.commentLabel?.font = .systemFont(ofSize: 10)
         return cell
     }

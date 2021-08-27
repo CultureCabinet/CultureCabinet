@@ -50,6 +50,12 @@ class DetailViewController: UIViewController {
         content_detail.text = content
     }
     
+    //210825 수정 추가//
+    override func viewWillDisappear(_ animated: Bool) {
+        presentingViewController?.children[0].viewDidAppear(false)
+    }
+    //210825 수정 추가//
+    
    
     func dateFormat1Setting(){
         dateformatter1.locale = Locale(identifier: "ko_KR")
@@ -66,18 +72,15 @@ class DetailViewController: UIViewController {
 //            .exhibition:"exhibition"
 //        ]
         
-       
-        
         categoryHelper.delete(categoryName: category)
         
-       
 //        let alert = UIAlertController(title: "알림", message: "성공적으로 삭제했습니다.", preferredStyle: .alert)
 //        let confirm = UIAlertAction(title: "확인", style: .default, handler: nil)
 //
 //        alert.addAction(confirm)
 //
 //        present(alert, animated: false, completion: nil)
-        dismiss(animated: false, completion: nil)
+        dismiss(animated: false, completion:nil)
         
     }
 }

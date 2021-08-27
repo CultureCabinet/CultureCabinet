@@ -31,7 +31,6 @@ class CategoryHelper {
     
     //210818 추가
     func insert(categoryName: String){
-//        let categoryName = intToCategoryNameString[category]
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Category")
         var categoryCnt = Category()
         do {
@@ -57,9 +56,18 @@ class CategoryHelper {
             print(error.localizedDescription)
         }
     }
-    //
+
+    func deleteAll(){
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Category")
+            let delete = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            do {
+                try context.execute(delete)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    
     func delete(categoryName: String){
-//        let categoryName = intToCategoryNameString[category]
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Category")
         var categoryCnt = Category()
         do {
@@ -86,11 +94,11 @@ class CategoryHelper {
         }
     }
     
-    func fetchCategory() -> Category {
+    func fetchCategory() -> [Category] {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Category")
-        var categoryCnt = Category()
+        var categoryCnt: [Category] = []
         do {
-            categoryCnt = try context.fetch(fetchRequest)[0] as! Category
+            categoryCnt = try context.fetch(fetchRequest) as! [Category]
         } catch {
             print(error.localizedDescription)
         }

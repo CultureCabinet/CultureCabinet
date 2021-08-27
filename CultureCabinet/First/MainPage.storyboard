@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="34"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                         <state key="normal" title="All">
-                                            <color key="titleColor" name="coral1"/>
+                                            <color key="titleColor" name="coral2"/>
                                         </state>
                                         <connections>
                                             <action selector="all:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Pw-xB-Vsa"/>
@@ -39,35 +39,50 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh0-UT-V2O">
                                         <rect key="frame" x="68" y="0.0" width="68" height="34"/>
-                                        <state key="normal" title="🎞"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                        <state key="normal" title="M">
+                                            <color key="titleColor" name="coral1"/>
+                                        </state>
                                         <connections>
                                             <action selector="movie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ESf-EV-FIl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slX-Op-t4B">
                                         <rect key="frame" x="136" y="0.0" width="68" height="34"/>
-                                        <state key="normal" title="🎬"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                        <state key="normal" title="D">
+                                            <color key="titleColor" name="coral1"/>
+                                        </state>
                                         <connections>
                                             <action selector="drama:" destination="BYZ-38-t0r" eventType="touchUpInside" id="94k-Jo-7j3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcR-8H-7ee">
                                         <rect key="frame" x="204" y="0.0" width="68" height="34"/>
-                                        <state key="normal" title="🎭"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                        <state key="normal" title="P">
+                                            <color key="titleColor" name="coral1"/>
+                                        </state>
                                         <connections>
                                             <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1t-ll-sk1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQl-CU-cI8">
                                         <rect key="frame" x="272" y="0.0" width="68" height="34"/>
-                                        <state key="normal" title="⚾️"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" name="coral1"/>
+                                        </state>
                                         <connections>
                                             <action selector="sports:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xom-dr-mXf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykk-m2-enX">
                                         <rect key="frame" x="340" y="0.0" width="68" height="34"/>
-                                        <state key="normal" title="🖼"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                        <state key="normal" title="E">
+                                            <color key="titleColor" name="coral1"/>
+                                        </state>
                                         <connections>
                                             <action selector="exhibition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzh-ji-xE8"/>
                                         </connections>
@@ -99,8 +114,8 @@
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🎬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHl-yA-xES">
                                                     <rect key="frame" x="8" y="8" width="23" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.06.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecr-Sg-jxz">
@@ -163,7 +178,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Izt-Bq-wQM" secondAttribute="trailing" constant="3" id="xvT-N1-DAK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.up" catalog="system" id="ns0-cN-2ZJ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.circle" catalog="system" id="ns0-cN-2ZJ"/>
                     <connections>
                         <outlet property="allBtn" destination="Pkj-CP-eEi" id="Y8c-pg-jQq"/>
                         <outlet property="collectionView" destination="L5q-6d-BOB" id="rhW-3M-WN3"/>
@@ -181,7 +196,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="house.circle" catalog="system" width="128" height="121"/>
         <namedColor name="coral1">
             <color red="0.96862745098039216" green="0.72156862745098038" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

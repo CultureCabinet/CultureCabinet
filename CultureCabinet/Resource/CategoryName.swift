@@ -16,11 +16,11 @@ enum CategoryName {
 }
 
 let categoryMap: [CategoryName:String] = [
-    .movie: "🎞",
-    .drama: "🎬",
-    .play: "🎭",
-    .sports: "⚾️",
-    .exhibition: "🖼"
+    .movie: "MOVIE",
+    .drama: "DRAMA",
+    .play: "PLAY",
+    .sports: "SPORTS",
+    .exhibition: "EXHIBIT."
 ]
 
 let intToCategoryNameString: [Int:String] = [

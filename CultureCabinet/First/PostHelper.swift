@@ -140,6 +140,17 @@ class PostHelper {
         }
     }
     
+    func fetchSelectedDatePost(selectedDateString: String)->[Post]{
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Post")
+        fetchRequest.predicate = NSPredicate(format: "date = \"\(selectedDateString)\"")
+        var posts = [Post]()
+        do {
+            posts = try context.fetch(fetchRequest) as! [Post]
+        } catch {
+            print(error.localizedDescription)
+        }
+        return posts
+    }
     
     
     

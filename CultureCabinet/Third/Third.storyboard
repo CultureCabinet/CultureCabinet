@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Calendar-->
         <scene sceneID="21H-KV-aGC">
             <objects>
                 <viewController id="EDR-Qs-0XT" customClass="CalendarVC" customModule="CultureCabinet" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             <constraint firstAttribute="trailing" secondItem="Bbx-lG-alf" secondAttribute="trailing" constant="20" id="wp8-xh-hvX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ug0-R1-CTV"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar.circle" catalog="system" id="Ug0-R1-CTV"/>
                     <connections>
                         <outlet property="cabinetCollectionView" destination="6pY-7z-6ad" id="4Nj-Oc-dTW"/>
                         <outlet property="calendarView" destination="Bbx-lG-alf" id="VTY-PT-2sa"/>
@@ -97,6 +97,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar.circle" catalog="system" width="128" height="121"/>
         <namedColor name="coral2">
             <color red="0.92500001192092896" green="0.64300000667572021" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
