@@ -31,26 +31,6 @@
                                 <color key="textColor" name="coral2"/>
                                 <color key="highlightedColor" name="coral2"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6pY-7z-6ad">
-                                <rect key="frame" x="20" y="482" width="374" height="326.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XMg-hp-zBf">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eaE-4J-SvO">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KAN-OV-TF0">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-j1-gOq">
                                 <rect key="frame" x="-15" y="436.5" width="30" height="30"/>
                                 <constraints>
@@ -64,28 +44,49 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ejZ-6f-4rY">
+                                <rect key="frame" x="20" y="472" width="374" height="390"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5zz-5f-qlL">
+                                    <size key="itemSize" width="180" height="310"/>
+                                    <size key="estimatedItemSize" width="180" height="310"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="exz-Hn-0eW">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="310"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5cQ-BX-dke">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="310"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UM1-mS-WYt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6pY-7z-6ad" firstAttribute="top" secondItem="YLK-pN-dNL" secondAttribute="bottom" constant="20" id="9QM-GR-5QI"/>
+                            <constraint firstItem="ejZ-6f-4rY" firstAttribute="top" secondItem="YLK-pN-dNL" secondAttribute="bottom" constant="10" id="5R6-SQ-e8K"/>
                             <constraint firstItem="YLK-pN-dNL" firstAttribute="centerY" secondItem="rfL-j1-gOq" secondAttribute="centerY" id="BLS-Jf-pNW"/>
                             <constraint firstItem="Bbx-lG-alf" firstAttribute="leading" secondItem="UM1-mS-WYt" secondAttribute="leading" constant="20" id="Ckw-5Q-Wfv"/>
                             <constraint firstItem="rfL-j1-gOq" firstAttribute="top" secondItem="Bbx-lG-alf" secondAttribute="bottom" constant="20" id="EO8-JZ-Zii"/>
                             <constraint firstItem="xX1-dV-xpb" firstAttribute="top" secondItem="UM1-mS-WYt" secondAttribute="top" constant="20" id="FAf-Ff-0hd"/>
+                            <constraint firstItem="ejZ-6f-4rY" firstAttribute="trailing" secondItem="Bbx-lG-alf" secondAttribute="trailing" id="Xd5-nr-wog"/>
                             <constraint firstItem="xX1-dV-xpb" firstAttribute="centerX" secondItem="Bbx-lG-alf" secondAttribute="centerX" id="YVh-Ho-NOh"/>
-                            <constraint firstItem="6pY-7z-6ad" firstAttribute="trailing" secondItem="Bbx-lG-alf" secondAttribute="trailing" id="a4e-eP-P6b"/>
-                            <constraint firstItem="UM1-mS-WYt" firstAttribute="bottom" secondItem="6pY-7z-6ad" secondAttribute="bottom" constant="53.5" id="acW-3X-r6o"/>
+                            <constraint firstItem="UM1-mS-WYt" firstAttribute="bottom" secondItem="ejZ-6f-4rY" secondAttribute="bottom" id="cMO-mM-Wv4"/>
+                            <constraint firstItem="ejZ-6f-4rY" firstAttribute="leading" secondItem="Bbx-lG-alf" secondAttribute="leading" id="hB1-hx-xAO"/>
                             <constraint firstItem="YLK-pN-dNL" firstAttribute="leading" secondItem="rfL-j1-gOq" secondAttribute="trailing" constant="10" id="hRq-xt-KnR"/>
                             <constraint firstItem="rfL-j1-gOq" firstAttribute="leading" secondItem="UM1-mS-WYt" secondAttribute="leading" constant="-15" id="q8k-UU-Ivj"/>
-                            <constraint firstItem="6pY-7z-6ad" firstAttribute="leading" secondItem="Bbx-lG-alf" secondAttribute="leading" id="reJ-yj-SJi"/>
                             <constraint firstItem="Bbx-lG-alf" firstAttribute="top" secondItem="xX1-dV-xpb" secondAttribute="bottom" constant="20" id="vVO-7l-maI"/>
                             <constraint firstAttribute="trailing" secondItem="Bbx-lG-alf" secondAttribute="trailing" constant="20" id="wp8-xh-hvX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar.circle" catalog="system" id="Ug0-R1-CTV"/>
                     <connections>
-                        <outlet property="cabinetCollectionView" destination="6pY-7z-6ad" id="4Nj-Oc-dTW"/>
+                        <outlet property="cabinetCollectionView" destination="ejZ-6f-4rY" id="j6x-vu-OTN"/>
                         <outlet property="calendarView" destination="Bbx-lG-alf" id="VTY-PT-2sa"/>
                         <outlet property="dateIcon" destination="rfL-j1-gOq" id="8lS-73-e06"/>
                         <outlet property="selectedDateLabel" destination="YLK-pN-dNL" id="wkx-1h-NwI"/>

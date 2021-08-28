@@ -10,6 +10,7 @@ import Foundation
 class MainPageViewController: UIViewController {
     let storyboardName = "MainPage"
     let storyboardID = "MainPage"
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var allBtn: UIButton!
     @IBOutlet weak var movieBtn: UIButton!
@@ -33,43 +34,6 @@ class MainPageViewController: UIViewController {
         super.viewDidLoad()
         dateFormat1Setting()
         dataFormat2Setting()
-
-//        let date:Date = Date()
-//        let dateString:String = dateformatter2.string(from: date)
-//        let post1 = PostData(title: "제목", date: dateString, score: 5.0, category: .drama)
-//        post1.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post2 = PostData(title: "제목2", date: "2021-08-09", score: 4.5, category: .movie)
-//        post2.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post3 = PostData(title: "제목3", date: dateString, score: 4.5, category: .sports)
-//        post3.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post4 = PostData(title: "제목4", date: dateString, score: 5.0, category: .drama)
-//        post4.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post5 = PostData(title: "제목5", date: "2021-08-06", score: 4.2, category: .exhibition)
-//        post5.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post6 = PostData(title: "제목6", date: dateString, score: 4.3, category: .play)
-//        post6.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post7 = PostData(title: "제목7", date: "2021-08-06", score: 4.3, category: .drama)
-//        post7.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        let post8 = PostData(title: "제목8", date: "2021-07-06", score: 4.3, category: .drama)
-//        post8.image = UIImage(named: "1")?.jpegData(compressionQuality: 0.7)
-//        posts.append(post1)
-//        posts.append(post2)
-//        posts.append(post3)
-//        posts.append(post4)
-//        posts.append(post5)
-//        posts.append(post6)
-//        posts.append(post7)
-//        posts.append(post8)
-//
-//        postHelper.deleteAll()
-//        postHelper.insertPost(ipost:post1)
-//        postHelper.insertPost(ipost:post2)
-//        postHelper.insertPost(ipost:post3)
-//        postHelper.insertPost(ipost:post4)
-//        postHelper.insertPost(ipost:post5)
-//        postHelper.insertPost(ipost:post6)
-//        postHelper.insertPost(ipost:post7)
-//        postHelper.insertPost(ipost:post8)
         
         postList = postHelper.fetchAllPost()
         posts = postToPostData(postss:postList)
@@ -101,7 +65,6 @@ class MainPageViewController: UIViewController {
         //button UI
         //db에서 모두 불러오기 async (posts 리스트 업데이트)
         postList = postHelper.fetchAllPost()
-//        print(postList)
         posts = postToPostData(postss:postList)
         collectionView.reloadData()
     }
@@ -160,7 +123,6 @@ class MainPageViewController: UIViewController {
         }
         return postDataList
     }
-    
 }
 
 

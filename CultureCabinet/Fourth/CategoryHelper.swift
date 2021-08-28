@@ -22,14 +22,12 @@ class CategoryHelper {
             category.setValue(0, forKey: "exhibition")
             do {
                 try context.save()
-                print("suc_ca")
             } catch {
                 print(error.localizedDescription)
             }
         }
     }
     
-    //210818 추가
     func insert(categoryName: String){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Category")
         var categoryCnt = Category()

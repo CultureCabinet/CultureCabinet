@@ -10,9 +10,9 @@ import UIKit
 class CabinetCVC: UICollectionViewCell {
     static let identifier = "CabinetCVC"
 
-    @IBOutlet var theme_icon: UILabel!
+    @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var starLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var commentView: UIView!
     @IBOutlet var commentLabel: UILabel!
     
     override func awakeFromNib() {
@@ -23,14 +23,13 @@ class CabinetCVC: UICollectionViewCell {
 
 extension CabinetCVC {
     func setUI() {
-        setView()
-    }
-    
-    func setView() {
-        commentView.backgroundColor = UIColor(named: "coral1")
+        setLabel()
     }
     
     func setLabel() {
-        commentLabel.font = .systemFont(ofSize: 10)
+        categoryLabel.font = .systemFont(ofSize: 10, weight: .semibold)
+        starLabel.font = .systemFont(ofSize: 10, weight: .bold)
+        starLabel.textColor = UIColor(named: "coral2")
+        commentLabel.font = .systemFont(ofSize: 10, weight: .regular)
     }
 }

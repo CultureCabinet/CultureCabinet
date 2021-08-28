@@ -30,17 +30,13 @@ class MyPageViewController: UIViewController {
         picker.delegate = self
         picker.sourceType = .photoLibrary
 
-        //DATA SET
-//        userHelper.deleteAll()
         if(userHelper.fetchUser().isEmpty){
             //처음 실행시 유저 데이터 삽입
-//            userHelper.deleteAll()
-            var initUser = UserData(image: (UIImage(named: "profile")?.jpegData(compressionQuality: 1))!, level: 0, username: "CC")
+            let initUser = UserData(image: (UIImage(named: "profile")?.jpegData(compressionQuality: 1))!, level: 0, username: "CC")
             initUser.level = Decimal(string: "1") as NSDecimalNumber? as! Int
             userHelper.insertUser(u: initUser)
         }
         
-//        categoryHelper.deleteAll()
         if(categoryHelper.fetchCategory().isEmpty){
             categoryHelper.insertCategoryData()
         }
@@ -50,7 +46,6 @@ class MyPageViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         categoryCnts = setListCnt(category: categoryHelper.fetchCategory()[0])
-        ///UI
         
         user = userHelper.fetchUser()[0]
 
@@ -110,7 +105,6 @@ class MyPageViewController: UIViewController {
         editButton.menu = UIMenu(title: "", image: UIImage(systemName: "heart.fill"), identifier: nil, options: .displayInline, children: [editName, editImage, cancel])
 
     }
-    
 }
 
 extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

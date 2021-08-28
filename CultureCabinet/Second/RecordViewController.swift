@@ -1,20 +1,28 @@
+//
+//  RecordViewController.swift
+//  CultureCabinet
+//
+//  Created by 권예진 on 2021/08/28.
+//
 import UIKit
 import CoreData
 import Cosmos
 
-class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+class RecordViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
                             UITextViewDelegate,UIPickerViewDelegate, UIPickerViewDataSource{
+    
     var container:NSPersistentContainer!
     let categoryHelper = CategoryHelper()
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var star: CosmosView!
-    @IBOutlet weak var idTextField: UITextField!
-    @IBOutlet weak var introTextView: UITextView!
-//    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var imageView: UIImageView!
     var imgData:Data!
     let categories: [String] = ["영화","드라마","연극","스포츠","전시회"]
     
@@ -25,18 +33,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         categories.count
     }
-    
-    // 각 행의 제목 설정
        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
            return categories[row]
        }
        
-       // 선택되었을 때 무엇을 할 것인지?
        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         UserInformation.shared.category = row
        }
    
-    
     lazy var imagePicker: UIImagePickerController = {
         let picker: UIImagePickerController = UIImagePickerController()
         picker.sourceType = .photoLibrary
@@ -52,23 +56,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func tapView(_ sender: UITapGestureRecognizer){
         self.view.endEditing(true)
-//
-//        if idTextField.text != nil && introTextView != nil{
-//                nextButton.isEnabled = true
-//
-//        }
-//        else {
-//            nextButton.isEnabled = false
-//        }
     }
     
-    
-//    @IBAction func touchUpNext(_ sender: UIButton){
-//        UserInformation.shared.title = idTextField.text!
-//        UserInformation.shared.content = introTextView.text!
-//        UserInformation.shared.image = imgData
-//    }
-//
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -77,20 +66,19 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         if let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             self.imageView.image = originalImage
-            //var data : Data = UIImage.pngData(originalImage)
-            //UserInformation.shared.image = originalImage
             imgData = originalImage.jpegData(compressionQuality: 0.75)
         }
         
         self.dismiss(animated: true, completion: nil)
     }
-    func placeholderSetting() {
-        introTextView.delegate = self // txtvReview가 유저가 선언한 outlet
-        introTextView.text = "제가 바로 PlaceHolder입니다."
-        introTextView.textColor = UIColor.lightGray
-        
-    }
     
+   
+    
+    func placeholderSetting() {
+        contentTextView.delegate = self // txtvReview가 유저가 선언한 outlet
+        contentTextView.text = "제가 바로 PlaceHolder입니다."
+        contentTextView.textColor = UIColor.lightGray
+    }
     
     // TextView Place Holder
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -98,7 +86,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             textView.text = nil
             textView.textColor = UIColor.black
         }
-        
     }
     // TextView Place Holder
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -111,18 +98,15 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = nil
-        idTextField.text = nil
+        titleTextField.text = nil
         UserInformation.shared.category = 0
-        introTextView.delegate = self // txtvReview가 유저가 선언한 outlet
-        introTextView.text =  nil
-        introTextView.textColor = UIColor.lightGray
+        contentTextView.delegate = self // txtvReview가 유저가 선언한 outlet
+        contentTextView.text =  nil
+        contentTextView.textColor = UIColor.lightGray
        
-        
         self.datePicker.addTarget(self, action: #selector(self.didDatePickerValueChanged(_:)), for: UIControl.Event.valueChanged)
         
         dateLabel.text = dateFormatter.string(from: Date())
-    
-//        nextButton.isEnabled = false
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapView(_:)))
         
@@ -131,7 +115,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.imageView.addGestureRecognizer(tapGestureImageView)
         self.view.addGestureRecognizer(tapGesture)
     }
-    // DatePicker
+    
     let dateFormatter: DateFormatter = {
         let formatter: DateFormatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -141,13 +125,11 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }()
    
     @IBAction func didDatePickerValueChanged(_ sender: UIDatePicker){
-        
         let date: Date = self.datePicker.date // sender.date
         let dateString: String = self.dateFormatter.string(from: date)
         self.dateLabel.text = dateString
     }
             
-    //취소, 이전, 가입 Button 액션
     @IBAction func touchUpCancel(_ sender: UIButton){
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
@@ -158,10 +140,11 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
+    
     @IBAction func touchUpComp(_ sender: UIButton){
-        if(idTextField.text != "" && introTextView.text != "" && imageView.image != nil){
-            UserInformation.shared.title = idTextField.text!
-            UserInformation.shared.content = introTextView.text!
+        if(titleTextField.text != "" &&  contentTextView.text != "" && imageView.image != nil){
+            UserInformation.shared.title = titleTextField.text!
+            UserInformation.shared.content =  contentTextView.text!
             UserInformation.shared.image = imgData
             UserInformation.shared.date = dateLabel.text!
             UserInformation.shared.score =  Float(star.rating)
@@ -198,13 +181,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             do{
                 try self.container.viewContext.save()
-                fetchContact()
                 let alert = UIAlertController(title: "알림", message: "성공적으로 저장했습니다.", preferredStyle: .alert)
-                let confirm = UIAlertAction(title: "확인", style: .default, handler: nil)
+               alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action: UIAlertAction!) in
+                        self.viewDidLoad()
+                }))
                
-                alert.addAction(confirm)
                 present(alert, animated: true, completion: nil)
-                self.viewDidLoad()
                
             }catch{
                 print(error.localizedDescription)
@@ -216,30 +198,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
            
             alert.addAction(confirm)
             present(alert, animated: true, completion: nil)
-            
-            
         }
-      
-        
-      
     }
-    func fetchContact(){
-        do{
-            let content = try self.container.viewContext.fetch(Post.fetchRequest())as! [Post]
-            content.forEach{
-                print($0.title,"title:")
-                print($0.date,"date:")
-                print($0.score,"score:")
-                print($0.content,"contents:")
-                print($0.image,"image:")
-                print($0.link,"link:")
-                print($0.category,"category:")
-            }
-            
-            }catch{
-                print(error.localizedDescription)
-            }
-        }
-    
-    
 }

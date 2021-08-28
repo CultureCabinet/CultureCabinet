@@ -28,7 +28,6 @@ class PostHelper {
     
     func fetchACategoryPost(category:CategoryName)->[Post]{
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Post")
-//        fetchRequest.predicate = NSPredicate(format: "category = %@", CategoryNameToInt[category]!)
         fetchRequest.predicate = NSPredicate(format: "category = 0")
         var posts = [Post]()
         do {
@@ -111,7 +110,6 @@ class PostHelper {
             post.setValue(ipost.score, forKey: "score")
             do {
                 try context.save()
-                print("suc")
             } catch {
                 print(error.localizedDescription)
             }
@@ -151,7 +149,4 @@ class PostHelper {
         }
         return posts
     }
-    
-    
-    
 }

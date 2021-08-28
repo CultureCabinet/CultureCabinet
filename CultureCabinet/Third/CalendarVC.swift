@@ -21,9 +21,6 @@ class CalendarVC: UIViewController {
     var one: [Date] = []
     var two: [Date] = []
     var threeMore: [Date] = []
-    var cabinet_theme: [String] = ["🎞", "🎬", "🎞"]
-    var cabinet_img_name: [String] = ["twilight", "슬기로운의사생활", "twilight"]
-    var cabinet_comment: [String] = ["책을 읽고 본 후기는 조금 아쉬웠지만, 재미있었다. 다음 이야기는 어떻게 표현되었을지 궁금해지는 영화였다. ", "very good drama\n", "I love 뱀파이어"]
     
     var selectedDate: Date = Date()
     var selectedDateString: String = ""
@@ -38,8 +35,6 @@ class CalendarVC: UIViewController {
         setUI()
         
         postList = postHelper.fetchAllPost()
-        print("postList")
-        print(postList)
         posts = postToPostData(postss:postList)
         
         dateFormatter.locale = Locale(identifier: "ko_KR")
@@ -47,7 +42,15 @@ class CalendarVC: UIViewController {
         
         setUpEvents()
     }
-   
+    
+    override func viewDidAppear(_ animated: Bool) {
+        postList = postHelper.fetchAllPost()
+        posts = postToPostData(postss:postList)
+        selectedDateLabel.text = ""
+        cabinetCollectionView.reloadData()
+        calendarView.reloadData()
+        setUpEvents()
+    }
     
     func postToPostData(postss: [Post]) -> [PostData]{
         var postDataList: [PostData] = []
@@ -68,6 +71,9 @@ class CalendarVC: UIViewController {
     }
     
     func setUpEvents() {
+        one = []
+        two = []
+        threeMore = []
         for post in posts {
             let date_toDate = dateFormatter.date(from: post.date)
             if one.contains(date_toDate!) {
@@ -108,15 +114,13 @@ extension CalendarVC: FSCalendarDelegate, FSCalendarDataSource {
         selectedDateString = dateFormatter.string(from: date)
         selectedDateLabel.text = selectedDateString
         
-        print("select")
-        print(selectedDateString)
-        
         postList = postHelper.fetchSelectedDatePost(selectedDateString: selectedDateString)
         posts = postToPostData(postss:postList)
-        print("select post")
-        print(postList)
-        //collectionView.reloadData()
         
+        setCollectionView()
+        setCollectionViewNib()
+        
+        cabinetCollectionView.reloadData()
     }
     
     func setIcon() {
@@ -137,41 +141,60 @@ extension CalendarVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CabinetCVC.identifier, for: indexPath) as? CabinetCVC else {
             return UICollectionViewCell()
         }
-        cell.theme_icon?.text = categoryMap[posts[indexPath.item].category]
-        cell.imageView?.image = UIImage(data: posts[indexPath.item].image ?? Data())
-        //cell.commentLabel?.text = cabinet_comment[indexPath.row]
-        cell.commentLabel?.font = .systemFont(ofSize: 10)
+        cell.categoryLabel.text = categoryMap[posts[indexPath.item].category]
+        cell.starLabel.text =
+            String(posts[indexPath.item].score)
+        cell.imageView.image = UIImage(data: posts[indexPath.item].image ?? Data())
+        cell.commentLabel?.text = posts[indexPath.item].content
         return cell
     }
 }
 
 extension CalendarVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.bounds.width - 30) / 2
-        let height = width*1.8
-        return CGSize(width: width, height: height)
+    func collectionView(_ collectionView: UICollectionView,
+                              layout collectionViewLayout: UICollectionViewLayout,
+                              sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 160, height: 300)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return 0
-    }
-        
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
+            return 10
     }
-        
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    
+    func collectionView(_ collectionView: UICollectionView,
+                             layout collectionViewLayout: UICollectionViewLayout,
+                             insetForSectionAt section: Int) -> UIEdgeInsets {
+        let inset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        return inset
+    }
+    
+}
+
+extension CalendarVC: UICollectionViewDelegate {
+    //상세화면으로 이동
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt: IndexPath){
+        guard let vc = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+            return
+        }
+        vc.image = posts[didSelectItemAt.item].image
+        vc.titles = posts[didSelectItemAt.item].title
+        vc.date = posts[didSelectItemAt.item].date
+        vc.score = posts[didSelectItemAt.item].score
+        vc.content = posts[didSelectItemAt.item].content
+        vc.indexs = didSelectItemAt.item
+        vc.category = CategoryNameToString[posts[didSelectItemAt.item].category]!
+        vc.modalPresentationStyle = .automatic
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true, completion: nil)
     }
 }
 
+// MARK:- UI
 extension CalendarVC {
     func setUI() {
         setCalendarView()
         setCalendarColor()
         setLabel()
-        setCollectionView()
-        setCollectionViewNib()
     }
     
     func setCalendarView() {
