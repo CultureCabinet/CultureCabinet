@@ -44,12 +44,12 @@ class UserHelper {
 
             do {
                 try context.save()
-                print("suc")
             } catch {
                 print(error.localizedDescription)
             }
         }
     }
+    
     func updateUser(u: User){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         var user = User()
@@ -60,7 +60,6 @@ class UserHelper {
             user.setValue(u.username, forKey: "username")
             do {
                 try context.save()
-                print("suc update")
             } catch {
                 print(error.localizedDescription)
             }

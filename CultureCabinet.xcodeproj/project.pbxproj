@@ -35,7 +35,6 @@
 		DEF2D0F226871CEA00F3D2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2D0F026871CEA00F3D2CA /* LaunchScreen.storyboard */; };
 		DEF2D13F26872CA700F3D2CA /* CategoryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D13D26872CA700F3D2CA /* CategoryName.swift */; };
 		DEF2D14026872CA700F3D2CA /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D13E26872CA700F3D2CA /* PostData.swift */; };
-		DEF2D14326872CB000F3D2CA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D14226872CB000F3D2CA /* Extension.swift */; };
 		F0559DEB26DA103500E88385 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0559DEA26DA103500E88385 /* RecordViewController.swift */; };
 		F0559DED26DA165800E88385 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0559DEC26DA165800E88385 /* Record.storyboard */; };
 		F0B33C0B268720C800C85149 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C05268720C800C85149 /* User+CoreDataClass.swift */; };
@@ -77,7 +76,6 @@
 		DEF2D0F326871CEA00F3D2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF2D13D26872CA700F3D2CA /* CategoryName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryName.swift; sourceTree = "<group>"; };
 		DEF2D13E26872CA700F3D2CA /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
-		DEF2D14226872CB000F3D2CA /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F0559DEA26DA103500E88385 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		F0559DEC26DA165800E88385 /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 		F0B33C05268720C800C85149 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			children = (
 				743DAF4926D8F32500945AD6 /* First */,
 				743DAF5026D8F32500945AD6 /* Fourth */,
-				DEF2D14226872CB000F3D2CA /* Extension.swift */,
 				DEF2D13C26872CA700F3D2CA /* Resource */,
 				DEF2D10A26871E1400F3D2CA /* Third */,
 				DEF2D10926871E0C00F3D2CA /* Second */,
@@ -347,7 +344,6 @@
 				743DAF5C26D8F32500945AD6 /* MainPageViewController.swift in Sources */,
 				F0B33C0C268720C800C85149 /* User+CoreDataProperties.swift in Sources */,
 				DE3F6D3A269981730036BD4B /* Post+CoreDataClass.swift in Sources */,
-				DEF2D14326872CB000F3D2CA /* Extension.swift in Sources */,
 				743DAF6226D8F32500945AD6 /* CategoryHelper.swift in Sources */,
 				DEF2D0E326871CE100F3D2CA /* AppDelegate.swift in Sources */,
 				DE3F6D6B26999E410036BD4B /* CalendarVC.swift in Sources */,

@@ -189,47 +189,6 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="411.83035714285711"/>
         </scene>
-        <!--My Page Edit View Controller-->
-        <scene sceneID="sEg-Cw-kAg">
-            <objects>
-                <viewController id="yvA-bU-EWr" customClass="MyPageEditViewController" customModule="CultureCabinet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aaY-zY-yEx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mL-Cb-Dfi">
-                                <rect key="frame" x="188" y="20" width="39" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                <color key="textColor" name="coral2"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQW-vD-p89">
-                                <rect key="frame" x="157" y="77" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="WQW-vD-p89" secondAttribute="height" multiplier="1:1" id="J8M-QN-u9j"/>
-                                    <constraint firstAttribute="width" constant="100" id="PE1-P0-Y6P"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbM-wW-5Ij">
-                                <rect key="frame" x="159" y="199" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Dlq-d2-6Wa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="WQW-vD-p89" firstAttribute="width" secondItem="WQW-vD-p89" secondAttribute="height" multiplier="1:1" id="dSQ-Fq-kO7"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="sc2-sI-4Uv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bXL-2n-cVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1798.5507246376812" y="411.83035714285711"/>
-        </scene>
     </scenes>
     <resources>
         <image name="pencil" catalog="system" width="128" height="113"/>

@@ -24,11 +24,8 @@ class MainPageViewController: UIViewController {
     let dateformatter1 = DateFormatter()
     let dateformatter2 = DateFormatter()
     let today = Date()
-   
-    
     let postHelper = PostHelper()
     var postList: [Post] = []
-
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,13 +54,11 @@ class MainPageViewController: UIViewController {
         dateformatter2.dateFormat = "YYYY-MM-dd"
     }
     
-    
-    
-    
+        
     //MARK: - button 처리
     @IBAction func all(_ sender: Any) {
         //button UI
-        //db에서 모두 불러오기 async (posts 리스트 업데이트)
+        //db에서 모두 불러오기 async
         postList = postHelper.fetchAllPost()
         posts = postToPostData(postss:postList)
         collectionView.reloadData()
@@ -140,9 +135,7 @@ extension MainPageViewController: UICollectionViewDataSource {
         cell.imgView.image = UIImage(data: posts[indexPath.item].image ?? Data())
         cell.titleLabel.text = posts[indexPath.item].title
         cell.dateLabel.text = posts[indexPath.item].date
-
         cell.layer.cornerRadius = 10
-        cell.backView.setGradient(color1: UIColor(white: 0, alpha: 0), color2: UIColor(white: 0, alpha: 1))
         
         return cell
     }
