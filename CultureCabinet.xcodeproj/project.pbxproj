@@ -26,6 +26,7 @@
 		DE3F6D3B269981730036BD4B /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D39269981730036BD4B /* Post+CoreDataProperties.swift */; };
 		DE3F6D6A26999E410036BD4B /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3F6D6826999E410036BD4B /* Third.storyboard */; };
 		DE3F6D6B26999E410036BD4B /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F6D6926999E410036BD4B /* CalendarVC.swift */; };
+		DECB052A26DF932A0089BE02 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DECB052926DF932A0089BE02 /* Record.storyboard */; };
 		DEF2D0E326871CE100F3D2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E226871CE100F3D2CA /* AppDelegate.swift */; };
 		DEF2D0E526871CE100F3D2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E426871CE100F3D2CA /* SceneDelegate.swift */; };
 		DEF2D0E726871CE100F3D2CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D0E626871CE100F3D2CA /* ViewController.swift */; };
@@ -36,7 +37,6 @@
 		DEF2D13F26872CA700F3D2CA /* CategoryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D13D26872CA700F3D2CA /* CategoryName.swift */; };
 		DEF2D14026872CA700F3D2CA /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2D13E26872CA700F3D2CA /* PostData.swift */; };
 		F0559DEB26DA103500E88385 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0559DEA26DA103500E88385 /* RecordViewController.swift */; };
-		F0559DED26DA165800E88385 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0559DEC26DA165800E88385 /* Record.storyboard */; };
 		F0B33C0B268720C800C85149 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C05268720C800C85149 /* User+CoreDataClass.swift */; };
 		F0B33C0C268720C800C85149 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */; };
 		F0B33C0D268720C800C85149 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */; };
@@ -65,6 +65,7 @@
 		DE3F6D39269981730036BD4B /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DE3F6D6826999E410036BD4B /* Third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
 		DE3F6D6926999E410036BD4B /* CalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		DECB052926DF932A0089BE02 /* Record.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 		DEF2D0DF26871CE100F3D2CA /* CultureCabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureCabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF2D0E226871CE100F3D2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF2D0E426871CE100F3D2CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		DEF2D13D26872CA700F3D2CA /* CategoryName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryName.swift; sourceTree = "<group>"; };
 		DEF2D13E26872CA700F3D2CA /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		F0559DEA26DA103500E88385 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		F0559DEC26DA165800E88385 /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 		F0B33C05268720C800C85149 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0B33C06268720C800C85149 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F0B33C07268720C800C85149 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -185,9 +185,9 @@
 		DEF2D10926871E0C00F3D2CA /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				DECB052926DF932A0089BE02 /* Record.storyboard */,
 				743DAF6626D9090A00945AD6 /* UserInformation.swift */,
 				F0559DEA26DA103500E88385 /* RecordViewController.swift */,
-				F0559DEC26DA165800E88385 /* Record.storyboard */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 				74263B8C26C389B60054398B /* CabinetCVC.xib in Resources */,
 				743DAF6126D8F32500945AD6 /* MyPage.storyboard in Resources */,
 				DE3F6D6A26999E410036BD4B /* Third.storyboard in Resources */,
-				F0559DED26DA165800E88385 /* Record.storyboard in Resources */,
+				DECB052A26DF932A0089BE02 /* Record.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
