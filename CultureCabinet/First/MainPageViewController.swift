@@ -25,6 +25,7 @@ class MainPageViewController: UIViewController {
     let dateformatter2 = DateFormatter()
     let today = Date()
     let postHelper = PostHelper()
+    let categoryHelper = CategoryHelper()
     var postList: [Post] = []
    
     override func viewDidLoad() {
@@ -32,6 +33,9 @@ class MainPageViewController: UIViewController {
         dateFormat1Setting()
         dataFormat2Setting()
         
+        if(categoryHelper.fetchCategory().isEmpty){
+            categoryHelper.insertCategoryData()
+        }
         postList = postHelper.fetchAllPost()
         posts = postToPostData(postss:postList)
     }
