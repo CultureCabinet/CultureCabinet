@@ -47,7 +47,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqh-Mb-7k8">
-                                <rect key="frame" x="66" y="62" width="282" height="30"/>
+                                <rect key="frame" x="66" y="74" width="282" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="FGo-or-cHO"/>
+                                    <constraint firstAttribute="width" constant="282" id="ixJ-eH-fK0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.88122987750000004" green="0.65503996610000004" blue="0.65489780900000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -141,6 +145,7 @@
                             <constraint firstItem="Zzo-Ie-ltk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="88" id="GyC-lX-VZ7"/>
                             <constraint firstItem="D0k-8L-OxK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="NNn-r4-1du"/>
                             <constraint firstItem="D0k-8L-OxK" firstAttribute="top" secondItem="sqh-Mb-7k8" secondAttribute="bottom" constant="17" id="PKT-rz-ecC"/>
+                            <constraint firstItem="sqh-Mb-7k8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="PXt-mp-4Kh"/>
                             <constraint firstItem="b55-8q-jZt" firstAttribute="leading" secondItem="Lym-I9-EDB" secondAttribute="trailing" constant="8" symbolic="YES" id="QO8-Vz-S0f"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uVT-NT-zOE" secondAttribute="trailing" constant="32" id="RyK-2p-1VC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wa1-AF-EMy" secondAttribute="trailing" constant="45" id="UZa-AC-ckN"/>
@@ -152,7 +157,6 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="b55-8q-jZt" secondAttribute="trailing" constant="20" id="hwK-G5-Vlo"/>
                             <constraint firstItem="b55-8q-jZt" firstAttribute="top" secondItem="8Pr-qL-72Y" secondAttribute="bottom" constant="8" symbolic="YES" id="iKx-YL-Uqq"/>
                             <constraint firstItem="sqh-Mb-7k8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="66" id="kCC-Sf-c6T"/>
-                            <constraint firstItem="sqh-Mb-7k8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="18" id="mXJ-jf-RVD"/>
                             <constraint firstItem="imT-jV-gSe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="nJh-Tg-RcZ"/>
                             <constraint firstItem="imT-jV-gSe" firstAttribute="top" secondItem="uVT-NT-zOE" secondAttribute="bottom" constant="34" id="njv-RV-x0z"/>
                             <constraint firstItem="uVT-NT-zOE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="qEg-8V-no6"/>
@@ -178,6 +182,11 @@
             <point key="canvasLocation" x="244.92753623188409" y="54.910714285714285"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Zzo-Ie-ltk">
+            <size key="intrinsicContentSize" width="215" height="39"/>
+        </designable>
+    </designables>
     <resources>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <namedColor name="coral2">
