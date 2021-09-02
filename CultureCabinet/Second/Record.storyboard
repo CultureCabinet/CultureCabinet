@@ -48,6 +48,10 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqh-Mb-7k8">
                                 <rect key="frame" x="66" y="62" width="282" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="XY8-l6-J6q"/>
+                                    <constraint firstAttribute="height" constant="30" id="YDc-7O-fvu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.88122987750000004" green="0.65503996610000004" blue="0.65489780900000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -178,6 +182,11 @@
             <point key="canvasLocation" x="244.92753623188409" y="54.910714285714285"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Zzo-Ie-ltk">
+            <size key="intrinsicContentSize" width="215" height="39"/>
+        </designable>
+    </designables>
     <resources>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <namedColor name="coral2">
