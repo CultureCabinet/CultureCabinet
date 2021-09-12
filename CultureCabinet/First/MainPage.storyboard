@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Culture Cabinet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1g-fF-4lZ">
-                                <rect key="frame" x="130.5" y="44" width="153.5" height="24"/>
+                                <rect key="frame" x="130.5" y="49" width="153.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="textColor" name="coral2"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Izt-Bq-wQM">
-                                <rect key="frame" x="3" y="76" width="408" height="34"/>
+                                <rect key="frame" x="3" y="77" width="408" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkj-CP-eEi">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="34"/>
@@ -90,7 +90,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L5q-6d-BOB">
-                                <rect key="frame" x="0.0" y="118" width="414" height="744"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="743"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gSM-SR-qPh">
                                     <size key="itemSize" width="195" height="231"/>
@@ -171,10 +171,10 @@
                             <constraint firstItem="o1g-fF-4lZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EZb-yb-oES"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L5q-6d-BOB" secondAttribute="bottom" id="FdA-xP-yJ4"/>
                             <constraint firstItem="L5q-6d-BOB" firstAttribute="top" secondItem="Izt-Bq-wQM" secondAttribute="bottom" constant="8" symbolic="YES" id="Id8-MK-Iie"/>
-                            <constraint firstItem="o1g-fF-4lZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g8g-2Y-AzU"/>
+                            <constraint firstItem="o1g-fF-4lZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="g8g-2Y-AzU"/>
                             <constraint firstItem="L5q-6d-BOB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ip2-oT-8i9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L5q-6d-BOB" secondAttribute="trailing" id="sjO-Tp-LEp"/>
-                            <constraint firstItem="Izt-Bq-wQM" firstAttribute="top" secondItem="o1g-fF-4lZ" secondAttribute="bottom" constant="8" symbolic="YES" id="ukg-Te-w14"/>
+                            <constraint firstItem="Izt-Bq-wQM" firstAttribute="top" secondItem="o1g-fF-4lZ" secondAttribute="bottom" constant="4" id="ukg-Te-w14"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Izt-Bq-wQM" secondAttribute="trailing" constant="3" id="xvT-N1-DAK"/>
                         </constraints>
                     </view>

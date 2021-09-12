@@ -15,7 +15,6 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate, U
     let categoryHelper = CategoryHelper()
     
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var categoryPicker: UIPickerView!
@@ -97,11 +96,6 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if imageView.image != nil {
-            self.view.bringSubviewToFront(imageView)
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +104,10 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate, U
         UserInformation.shared.category = 0
         contentTextView.delegate = self // txtvReview가 유저가 선언한 outlet
         contentTextView.text =  nil
-        contentTextView.textColor = UIColor.lightGray
+        contentTextView.textColor = UIColor.black
+        contentTextView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = 10
+        completeButton.layer.cornerRadius = 10
        
         self.datePicker.addTarget(self, action: #selector(self.didDatePickerValueChanged(_:)), for: UIControl.Event.valueChanged)
         
@@ -190,12 +187,11 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate, U
             do{
                 try self.container.viewContext.save()
                 let alert = UIAlertController(title: "알림", message: "성공적으로 저장했습니다.", preferredStyle: .alert)
-               alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action: UIAlertAction!) in
-                        self.viewDidLoad()
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action: UIAlertAction!) in
+                    self.viewDidLoad()
+                    self.view.bringSubviewToFront(self.addPhotoLabel)
                 }))
-               
                 present(alert, animated: true, completion: nil)
-               
             }catch{
                 print(error.localizedDescription)
             }
