@@ -191,11 +191,6 @@
             <point key="canvasLocation" x="244.92753623188409" y="54.910714285714285"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="Zzo-Ie-ltk">
-            <size key="intrinsicContentSize" width="215" height="39"/>
-        </designable>
-    </designables>
     <resources>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <namedColor name="coral2">

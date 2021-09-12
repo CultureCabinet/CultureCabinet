@@ -1,4 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-CultureCabinet/Pods-CultureCabinet-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework
 ${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
