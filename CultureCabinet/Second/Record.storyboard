@@ -44,10 +44,14 @@
                                     <constraint firstAttribute="width" constant="177" id="Id3-W0-uzK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqh-Mb-7k8">
                                 <rect key="frame" x="66" y="62" width="282" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="XY8-l6-J6q"/>
+                                    <constraint firstAttribute="height" constant="30" id="YDc-7O-fvu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.88122987750000004" green="0.65503996610000004" blue="0.65489780900000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -128,6 +132,12 @@
                                     <action selector="touchUpComp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="g1X-Zn-qba"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChJ-mM-4TF">
+                                <rect key="frame" x="63.5" y="167.5" width="63.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -139,9 +149,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="imT-jV-gSe" secondAttribute="trailing" constant="32" id="FTS-TF-6Rh"/>
                             <constraint firstItem="8Pr-qL-72Y" firstAttribute="leading" secondItem="D0k-8L-OxK" secondAttribute="trailing" constant="22" id="FZX-fF-L0S"/>
                             <constraint firstItem="Zzo-Ie-ltk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="88" id="GyC-lX-VZ7"/>
+                            <constraint firstItem="ChJ-mM-4TF" firstAttribute="centerY" secondItem="D0k-8L-OxK" secondAttribute="centerY" id="LMo-Y8-fou"/>
                             <constraint firstItem="D0k-8L-OxK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="NNn-r4-1du"/>
                             <constraint firstItem="D0k-8L-OxK" firstAttribute="top" secondItem="sqh-Mb-7k8" secondAttribute="bottom" constant="17" id="PKT-rz-ecC"/>
                             <constraint firstItem="b55-8q-jZt" firstAttribute="leading" secondItem="Lym-I9-EDB" secondAttribute="trailing" constant="8" symbolic="YES" id="QO8-Vz-S0f"/>
+                            <constraint firstItem="ChJ-mM-4TF" firstAttribute="centerX" secondItem="D0k-8L-OxK" secondAttribute="centerX" id="Qaa-Na-Ioi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uVT-NT-zOE" secondAttribute="trailing" constant="32" id="RyK-2p-1VC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wa1-AF-EMy" secondAttribute="trailing" constant="45" id="UZa-AC-ckN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Zzo-Ie-ltk" secondAttribute="trailing" constant="88" id="Vu7-hz-70X"/>
@@ -163,6 +175,7 @@
                     <tabBarItem key="tabBarItem" title="Record" image="plus.circle" catalog="system" id="mfu-8d-mEF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="ChJ-mM-4TF" id="k57-MM-laM"/>
                         <outlet property="categoryPicker" destination="8Pr-qL-72Y" id="pTR-Vd-N3T"/>
                         <outlet property="completeButton" destination="imT-jV-gSe" id="osK-Vs-Arb"/>
                         <outlet property="contentTextView" destination="uVT-NT-zOE" id="ZJn-q6-AAF"/>

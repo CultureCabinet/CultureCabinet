@@ -23,6 +23,7 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var star: CosmosView!
+    @IBOutlet weak var addPhotoLabel: UILabel!
     var imgData:Data!
     let categories: [String] = ["영화","드라마","연극","스포츠","전시회"]
     
@@ -52,6 +53,7 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func tapSelectImageView(_ sender: Any){
         self.present(self.imagePicker, animated: true, completion: nil)
+        
     }
     
     @IBAction func tapView(_ sender: UITapGestureRecognizer){
@@ -67,8 +69,8 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate, U
         if let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             self.imageView.image = originalImage
             imgData = originalImage.jpegData(compressionQuality: 0.75)
+            self.view.bringSubviewToFront(imageView)
         }
-        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -92,6 +94,12 @@ class RecordViewController: UIViewController, UIImagePickerControllerDelegate, U
         if textView.text.isEmpty {
             textView.text = "느낀점을 작성하세요."
             textView.textColor = UIColor.lightGray
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if imageView.image != nil {
+            self.view.bringSubviewToFront(imageView)
         }
     }
 

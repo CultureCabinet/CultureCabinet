@@ -145,16 +145,16 @@ extension CalendarVC: UICollectionViewDataSource {
         cell.starLabel.text =
             String(posts[indexPath.item].score)
         cell.imageView.image = UIImage(data: posts[indexPath.item].image ?? Data())
-        cell.commentLabel?.text = posts[indexPath.item].content
+        cell.commentLabel?.text = posts[indexPath.item].title
         return cell
     }
 }
 
 extension CalendarVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                              layout collectionViewLayout: UICollectionViewLayout,
-                              sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 300)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (cabinetCollectionView.frame.width - 30) / 2
+        let height = width * 1.3
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
