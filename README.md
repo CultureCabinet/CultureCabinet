@@ -11,6 +11,13 @@
 - 추가 개발 및 유지보수 기간: 2021.08.28 ~ 2021.09.04   
 - 앱스토어 출시: 2021.09.12
 
+## Screen Shots
+<div>
+<img src="https://user-images.githubusercontent.com/41771874/134752983-9a10b8f0-4f06-4369-abfa-2c1f7f6d190c.png" width = 200>
+<img src="https://user-images.githubusercontent.com/41771874/134752980-f197060d-da62-470d-88b1-4b1e15274163.png" width = 200>
+</div>
+
+
 ## iOS Developers
 | <center>권예진</center><br><img src="https://user-images.githubusercontent.com/41771874/134752886-99bd59e3-2761-462d-9f91-810376c1e16d.png" width = 150 align = center><br>[yegin0928](https://github.com/yejin0928) | <center>임수정</center><br><img src="https://user-images.githubusercontent.com/41771874/134629129-65b78708-e620-469b-8618-b3e7f140efa9.png" width = 140 align = center><br>[sio2whocodes](https://github.com/sio2whocodes) | <center>정지우</center><br><img src="https://user-images.githubusercontent.com/41771874/134625950-3d9fa1b8-9d29-4062-a253-1ee30703e7ae.png" width = 150><br>[jjuyaa](https://github.com/jjuyaa) |
 | - | - | - |
