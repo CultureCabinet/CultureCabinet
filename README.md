@@ -12,7 +12,7 @@
 - 앱스토어 출시: 2021.09.12
 
 ## iOS Developers
-| <center>권예진</center><br><img src="" width = 150 align = center><br>[yegin0928](https://github.com/yejin0928) | <center>임수정</center><br><img src="https://user-images.githubusercontent.com/41771874/134629129-65b78708-e620-469b-8618-b3e7f140efa9.png" width = 140 align = center><br>[sio2whocodes](https://github.com/sio2whocodes) | <center>정지우</center><br><img src="https://user-images.githubusercontent.com/41771874/134625950-3d9fa1b8-9d29-4062-a253-1ee30703e7ae.png" width = 150><br>[jjuyaa](https://github.com/jjuyaa) |
+| <center>권예진</center><br><img src="https://user-images.githubusercontent.com/41771874/134752886-99bd59e3-2761-462d-9f91-810376c1e16d.png" width = 150 align = center><br>[yegin0928](https://github.com/yejin0928) | <center>임수정</center><br><img src="https://user-images.githubusercontent.com/41771874/134629129-65b78708-e620-469b-8618-b3e7f140efa9.png" width = 140 align = center><br>[sio2whocodes](https://github.com/sio2whocodes) | <center>정지우</center><br><img src="https://user-images.githubusercontent.com/41771874/134625950-3d9fa1b8-9d29-4062-a253-1ee30703e7ae.png" width = 150><br>[jjuyaa](https://github.com/jjuyaa) |
 | - | - | - |
 
 
@@ -35,6 +35,10 @@ iOS Deployment Target : iOS 14.4
 | <center>일별 리뷰 모음 화면</center> | <center>✅</center> | <center>정지우</center> |
 | <center>마이페이지</center> | <center>✅</center> | <center>임수정</center> |
 
+## Vesion
+- 1.0 (2021.09.12)
+- 1.1 : 글 작성 UI 수정 (2021.09.14)
+   
 
 ## Structure
 
