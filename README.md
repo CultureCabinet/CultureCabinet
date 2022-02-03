@@ -19,7 +19,7 @@
 
 
 ## iOS Developers
-| <center>권예진</center><br><img src="https://user-images.githubusercontent.com/41771874/134752886-99bd59e3-2761-462d-9f91-810376c1e16d.png" width = 150 align = center><br>[yegin0928](https://github.com/yejin0928) | <center>임수정</center><br><img src="https://user-images.githubusercontent.com/41771874/134629129-65b78708-e620-469b-8618-b3e7f140efa9.png" width = 140 align = center><br>[sio2whocodes](https://github.com/sio2whocodes) | <center>정지우</center><br><img src="https://user-images.githubusercontent.com/41771874/134625950-3d9fa1b8-9d29-4062-a253-1ee30703e7ae.png" width = 150><br>[jjuyaa](https://github.com/jjuyaa) |
+| <center>권예진</center><br><img src="https://user-images.githubusercontent.com/41771874/134752886-99bd59e3-2761-462d-9f91-810376c1e16d.png" width = 150 align = center><br>[yejin0928](https://github.com/yejin0928) | <center>임수정</center><br><img src="https://user-images.githubusercontent.com/41771874/134629129-65b78708-e620-469b-8618-b3e7f140efa9.png" width = 140 align = center><br>[sio2whocodes](https://github.com/sio2whocodes) | <center>정지우</center><br><img src="https://user-images.githubusercontent.com/41771874/134625950-3d9fa1b8-9d29-4062-a253-1ee30703e7ae.png" width = 150><br>[jjuyaa](https://github.com/jjuyaa) |
 | - | - | - |
 
 
